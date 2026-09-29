@@ -1,0 +1,6 @@
+{
+  "files": ["mo-co/dist/index.html"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}

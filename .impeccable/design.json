@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T14:37:25.771192+00:00",
+  "title": "Design System: MO Co.",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Tinta petróleo",
+        "tonalRamp": [
+          "oklch(15% 0.03979 222.85)",
+          "oklch(26% 0.03979 222.85)",
+          "oklch(38% 0.03979 222.85)",
+          "oklch(49% 0.03979 222.85)",
+          "oklch(61% 0.03979 222.85)",
+          "oklch(72% 0.03979 222.85)",
+          "oklch(84% 0.03979 222.85)",
+          "oklch(95% 0.03979 222.85)"
+        ]
+      },
+      "navy": {
+        "role": "primary",
+        "displayName": "Petróleo institucional",
+        "tonalRamp": [
+          "oklch(15% 0.03979 222.85)",
+          "oklch(26% 0.03979 222.85)",
+          "oklch(38% 0.03979 222.85)",
+          "oklch(49% 0.03979 222.85)",
+          "oklch(61% 0.03979 222.85)",
+          "oklch(72% 0.03979 222.85)",
+          "oklch(84% 0.03979 222.85)",
+          "oklch(95% 0.03979 222.85)"
+        ]
+      },
+      "navy-raised": {
+        "role": "primary",
+        "displayName": "Petróleo elevado",
+        "tonalRamp": [
+          "oklch(15% 0.04530 220.71)",
+          "oklch(26% 0.04530 220.71)",
+          "oklch(38% 0.04530 220.71)",
+          "oklch(49% 0.04530 220.71)",
+          "oklch(61% 0.04530 220.71)",
+          "oklch(72% 0.04530 220.71)",
+          "oklch(84% 0.04530 220.71)",
+          "oklch(95% 0.04530 220.71)"
+        ]
+      },
+      "navy-line": {
+        "role": "neutral",
+        "displayName": "Divisor petróleo",
+        "tonalRamp": [
+          "oklch(15% 0.03898 217.83)",
+          "oklch(26% 0.03898 217.83)",
+          "oklch(38% 0.03898 217.83)",
+          "oklch(49% 0.03898 217.83)",
+          "oklch(61% 0.03898 217.83)",
+          "oklch(72% 0.03898 217.83)",
+          "oklch(84% 0.03898 217.83)",
+          "oklch(95% 0.03898 217.83)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel frío",
+        "tonalRamp": [
+          "oklch(15% 0.00412 157.18)",
+          "oklch(26% 0.00412 157.18)",
+          "oklch(38% 0.00412 157.18)",
+          "oklch(49% 0.00412 157.18)",
+          "oklch(61% 0.00412 157.18)",
+          "oklch(72% 0.00412 157.18)",
+          "oklch(84% 0.00412 157.18)",
+          "oklch(95% 0.00412 157.18)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Blanco",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(26% 0.00000 89.88)",
+          "oklch(38% 0.00000 89.88)",
+          "oklch(49% 0.00000 89.88)",
+          "oklch(61% 0.00000 89.88)",
+          "oklch(72% 0.00000 89.88)",
+          "oklch(84% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Menta MO",
+        "tonalRamp": [
+          "oklch(15% 0.05665 157.82)",
+          "oklch(26% 0.05665 157.82)",
+          "oklch(38% 0.05665 157.82)",
+          "oklch(49% 0.05665 157.82)",
+          "oklch(61% 0.05665 157.82)",
+          "oklch(72% 0.05665 157.82)",
+          "oklch(84% 0.05665 157.82)",
+          "oklch(95% 0.05665 157.82)"
+        ]
+      },
+      "green": {
+        "role": "secondary",
+        "displayName": "Verde técnico",
+        "tonalRamp": [
+          "oklch(15% 0.06454 168.32)",
+          "oklch(26% 0.06454 168.32)",
+          "oklch(38% 0.06454 168.32)",
+          "oklch(49% 0.06454 168.32)",
+          "oklch(61% 0.06454 168.32)",
+          "oklch(72% 0.06454 168.32)",
+          "oklch(84% 0.06454 168.32)",
+          "oklch(95% 0.06454 168.32)"
+        ]
+      },
+      "signal": {
+        "role": "tertiary",
+        "displayName": "Amarillo señal",
+        "tonalRamp": [
+          "oklch(15% 0.13421 93.80)",
+          "oklch(26% 0.13421 93.80)",
+          "oklch(38% 0.13421 93.80)",
+          "oklch(49% 0.13421 93.80)",
+          "oklch(61% 0.13421 93.80)",
+          "oklch(72% 0.13421 93.80)",
+          "oklch(84% 0.13421 93.80)",
+          "oklch(95% 0.13421 93.80)"
+        ]
+      },
+      "signal-hover": {
+        "role": "tertiary",
+        "displayName": "Amarillo señal hover",
+        "tonalRamp": [
+          "oklch(15% 0.10429 92.29)",
+          "oklch(26% 0.10429 92.29)",
+          "oklch(38% 0.10429 92.29)",
+          "oklch(49% 0.10429 92.29)",
+          "oklch(61% 0.10429 92.29)",
+          "oklch(72% 0.10429 92.29)",
+          "oklch(84% 0.10429 92.29)",
+          "oklch(95% 0.10429 92.29)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Texto secundario claro",
+        "tonalRamp": [
+          "oklch(15% 0.03315 222.03)",
+          "oklch(26% 0.03315 222.03)",
+          "oklch(38% 0.03315 222.03)",
+          "oklch(49% 0.03315 222.03)",
+          "oklch(61% 0.03315 222.03)",
+          "oklch(72% 0.03315 222.03)",
+          "oklch(84% 0.03315 222.03)",
+          "oklch(95% 0.03315 222.03)"
+        ]
+      },
+      "on-dark-muted": {
+        "role": "neutral",
+        "displayName": "Texto secundario oscuro",
+        "tonalRamp": [
+          "oklch(15% 0.01928 213.42)",
+          "oklch(26% 0.01928 213.42)",
+          "oklch(38% 0.01928 213.42)",
+          "oklch(49% 0.01928 213.42)",
+          "oklch(61% 0.01928 213.42)",
+          "oklch(72% 0.01928 213.42)",
+          "oklch(84% 0.01928 213.42)",
+          "oklch(95% 0.01928 213.42)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divisor claro",
+        "tonalRamp": [
+          "oklch(15% 0.01329 185.04)",
+          "oklch(26% 0.01329 185.04)",
+          "oklch(38% 0.01329 185.04)",
+          "oklch(49% 0.01329 185.04)",
+          "oklch(61% 0.01329 185.04)",
+          "oklch(72% 0.01329 185.04)",
+          "oklch(84% 0.01329 185.04)",
+          "oklch(95% 0.01329 185.04)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Título principal adaptable."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de sección."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Títulos de contenido."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Lectura general de hasta 70ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Metadatos breves después del título."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Acción principal y resúmenes desplegables."
+      }
+    },
+    "shadows": [
+      {
+        "name": "action-hover",
+        "value": "0 8px 20px #0003",
+        "purpose": "Sombra temporal bajo la acción amarilla al pasar el puntero."
+      }
+    ],
+    "motion": [
+      {
+        "name": "duration",
+        "value": "220ms",
+        "purpose": "Transiciones de controles y navegación."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Entrada de línea activa y giro del signo más."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "Sin transiciones ni animaciones cuando se solicita movimiento reducido; scroll-behavior:auto."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "stacked-header",
+        "value": "960px"
+      },
+      {
+        "name": "single-column",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Acción principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción amarilla con icono SVG y sombra temporal.",
+      "html": "<a href=\"#esencia\" class=\"ds-button\">Conoce nuestro mundo <svg width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 5 14 14M5 19h14V5\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:40px;max-width:100%;padding:17px 22px;min-height:56px;border-radius:var(--control-radius,5px);background:var(--signal,#efd061);color:var(--ink,#102e38);font-family:var(--font-body,Manrope,sans-serif);font-size:.9375rem;line-height:1.7;font-weight:800;text-decoration:none;transition:background 220ms,box-shadow 220ms}.ds-button:hover{background:var(--signal-hover,#ffe594);box-shadow:0 8px 20px #0003}.ds-button:active{background:#d9b847}.ds-button:focus-visible{outline:3px solid #a54a1e;outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Navegación",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Enlaces visibles con la sección actual indicada por una línea amarilla.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegación principal\"><a href=\"#esencia\" aria-current=\"location\">Nuestra esencia</a><a href=\"#horizonte\">Nuestro horizonte</a><a href=\"#compromisos\">Compromisos de futuro</a></nav>",
+      "css": ".ds-nav{display:flex;gap:30px;flex-wrap:wrap;background:var(--navy,#102e38);padding:0 22px;font-family:var(--font-body,Manrope,sans-serif);}.ds-nav a{position:relative;display:flex;align-items:center;padding:20px 0;color:var(--on-dark-muted,#bfd0d4);font-size:.875rem;line-height:1.5;font-weight:700;text-decoration:none}.ds-nav a:after{content:\"\";position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--signal,#efd061);transform:scaleX(0);transform-origin:left;transition:transform 220ms cubic-bezier(.16,1,.3,1)}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--white,#fff)}.ds-nav a:hover:after,.ds-nav a[aria-current]:after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:3px solid var(--signal,#efd061);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a:after{transition:none}}"
+    },
+    {
+      "name": "Tarjeta de misión",
+      "kind": "card",
+      "refersTo": "purpose-card",
+      "description": "Superficie plana con título primero y contenido completo.",
+      "html": "<article class=\"ds-mission\"><h3>Crear para conectar.</h3><span>NUESTRO PROPÓSITO / MISIÓN</span><p>Crear robots MO con capacidades especializadas para realizar distintas tareas y desarrollar formas de interacción que vayan más allá de una función mecánica.</p></article>",
+      "css": ".ds-mission{background:var(--mint,#b5dfc5);color:var(--ink,#102e38);border:none;border-radius:var(--radius,12px);padding:40px;font-family:var(--font-body,Manrope,sans-serif);}.ds-mission h3{font-family:var(--font-display,\"Chakra Petch\",sans-serif);font-weight:700;font-size:2.4rem;line-height:1.2;letter-spacing:-.025em;max-width:14ch;margin:0 0 22px}.ds-mission>span{display:block;color:var(--green,#265b49);font-size:.75rem;letter-spacing:.04em;font-weight:800;margin-bottom:26px}.ds-mission p{margin:0;line-height:1.8;color:#254940}@media(max-width:760px){.ds-mission{padding:28px}.ds-mission h3{font-size:2rem;max-width:none}.ds-mission>span{font-size:.8125rem;margin-bottom:20px}}"
+    },
+    {
+      "name": "Tarjeta de visión",
+      "kind": "card",
+      "refersTo": "vision-card",
+      "description": "Superficie plana con título primero y contenido completo.",
+      "html": "<article class=\"ds-vision\"><h3>Que el legado siga vivo.</h3><span>EL FUTURO QUE IMAGINAMOS / VISIÓN</span><p>Preservar el legado tecnológico de Moe y asegurar la continuidad de los robots MO mediante la innovación, el mantenimiento de sus sistemas y el desarrollo de sus capacidades.</p></article>",
+      "css": ".ds-vision{background:var(--white,#fff);color:var(--ink,#102e38);border:1px solid var(--line,#c8d4d2);border-radius:var(--radius,12px);padding:40px;font-family:var(--font-body,Manrope,sans-serif);}.ds-vision h3{font-family:var(--font-display,\"Chakra Petch\",sans-serif);font-weight:700;font-size:2.4rem;line-height:1.2;letter-spacing:-.025em;max-width:14ch;margin:0 0 22px}.ds-vision>span{display:block;color:var(--green,#265b49);font-size:.75rem;letter-spacing:.04em;font-weight:800;margin-bottom:26px}.ds-vision p{margin:0;line-height:1.8;color:var(--muted,#48616a)}@media(max-width:760px){.ds-vision{padding:28px}.ds-vision h3{font-size:2rem;max-width:none}.ds-vision>span{font-size:.8125rem;margin-bottom:20px}}"
+    },
+    {
+      "name": "Panel de diagnóstico",
+      "kind": "card",
+      "refersTo": "horizon-card",
+      "description": "Panel petróleo elevado con filas delimitadas y metadatos posteriores al título.",
+      "html": "<article class=\"ds-horizon\"><h3>Un mundo de posibilidades</h3><p>Nuestras oportunidades</p><div><span>02</span><strong>HACIA AFUERA</strong></div><ul><li>Cubrir necesidades de asistencia.</li><li>Intercambio con otros inventores.</li><li>Recuperación de materiales y piezas.</li></ul></article>",
+      "css": ".ds-horizon{background:var(--navy-raised,#183c47);color:var(--paper,#f4f7f5);padding:36px 40px 40px;font-family:var(--font-body,Manrope,sans-serif);}.ds-horizon h3{font-family:var(--font-display,\"Chakra Petch\",sans-serif);font-weight:700;font-size:clamp(1.5rem,2.25vw,2rem);line-height:1.2;letter-spacing:-.025em;max-width:20ch;margin:0}.ds-horizon p{font-size:.875rem;margin:9px 0 0;color:var(--on-dark-muted,#bfd0d4)}.ds-horizon>div{display:flex;gap:15px;align-items:center;margin-bottom:28px}.ds-horizon>div>span{font-family:var(--font-display,\"Chakra Petch\",sans-serif);font-weight:700;color:var(--mint,#b5dfc5);font-size:1rem;font-variant-numeric:tabular-nums}.ds-horizon strong{font-size:.75rem;letter-spacing:.045em;font-weight:800;color:var(--on-dark-muted,#bfd0d4)}.ds-horizon ul{margin:25px 0 0;padding:0;list-style:none}.ds-horizon li{position:relative;padding:12px 0 12px 20px;border-top:1px solid var(--navy-line,#42616a);font-size:.9375rem;line-height:1.6;color:#e0e9e9}.ds-horizon li:before{content:\"\";position:absolute;left:0;top:23px;width:5px;height:5px;border-radius:1px;background:var(--mint,#b5dfc5)}@media(max-width:760px){.ds-horizon{padding:28px}.ds-horizon li{font-size:1rem}}"
+    },
+    {
+      "name": "Criterios desplegables",
+      "kind": "custom",
+      "refersTo": "disclosure",
+      "description": "Control nativo de apertura con foco visible y signo más SVG.",
+      "html": "<details class=\"ds-details\"><summary>Cómo lo haremos y mediremos <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><dl><div><dt>Qué haremos</dt><dd>Inspeccionar y reparar las unidades MO.</dd></div><div><dt>En qué plazo</dt><dd>Completarlo en 3 meses</dd></div></dl></details>",
+      "css": ".ds-details{border-top:1px solid var(--line,#c8d4d2);color:var(--ink,#102e38);font-family:var(--font-body,Manrope,sans-serif);}.ds-details summary{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:19px 0;font-size:.9375rem;line-height:1.7;font-weight:800;cursor:pointer;list-style:none}.ds-details summary::-webkit-details-marker{display:none}.ds-details summary:hover,.ds-details[open] summary{color:var(--green,#265b49)}.ds-details summary:focus-visible{outline:3px solid #a54a1e;outline-offset:5px;}.ds-details svg{flex-shrink:0;transition:transform 220ms cubic-bezier(.16,1,.3,1)}.ds-details[open] svg{transform:rotate(45deg)}.ds-details dl{padding:8px 24px;margin:0 0 8px;background:var(--white,#fff);border:1px solid var(--line,#c8d4d2);border-radius:var(--radius,12px)}.ds-details dl>div{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:15px 0}.ds-details dl>div+div{border-top:1px solid var(--line,#c8d4d2)}.ds-details dt{font-size:.875rem;font-weight:800}.ds-details dd{margin:0;font-size:.9375rem;color:var(--muted,#48616a)}@media(max-width:760px){.ds-details dl>div{grid-template-columns:1fr;gap:5px}.ds-details summary{font-size:.875rem}}@media(prefers-reduced-motion:reduce){.ds-details svg{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Instituto de robótica de Ooo",
+    "overview": "La identidad combina el rigor de un catálogo de ingeniería con la calidez de los robots MO. Las superficies petróleo sostienen la marca y el diagnóstico; las superficies claras facilitan la lectura. Los titulares cuadrados, el cuerpo humanista y las divisiones precisas construyen una institución cercana y curiosa.\n\nLa personalidad aparece en los personajes, la ilustración y los acentos de color. El retrato tridimensional de BMO y el paisaje de Ooo conviven con una interfaz contenida: lectura por secciones, datos alineados y controles reconocibles. Este documento registra el código implementado en `mo-co/dist/index.html`, `styles.css` y `app.js`; no deriva de una maqueta aprobada.",
+    "keyCharacteristics": [
+      "Petróleo institucional, verde MO y amarillo señal.",
+      "Titulares de geometría técnica y lectura humanista.",
+      "Superficies planas, divisiones finas y esquinas contenidas.",
+      "Personajes con volumen y controles de movimiento breve.",
+      "Contenido completo, navegación visible y acceso por teclado."
+    ],
+    "rules": [
+      {
+        "name": "The Surface Contrast Rule",
+        "body": "Usar verde técnico sobre superficies claras y menta sobre petróleo; el texto secundario cambia de token con el fondo.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heading First Rule",
+        "body": "El título encabeza visualmente cada bloque; las etiquetas conservadas de sección, misión, diagnóstico y plazo aparecen después y permanecen legibles.",
+        "section": "typography"
+      },
+      {
+        "name": "The Character Volume Rule",
+        "body": "Reservar el volumen expresivo para la imagen del personaje; separar la información con tono, espacio y reglas.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** usar los tokens de texto apropiados para cada superficie clara u oscura.",
+      "**Do** mantener títulos primero, metadatos después y textos completos al cambiar el tamaño de pantalla.",
+      "**Do** conservar la navegación visible, el foco exterior y los desplegables nativos utilizables por teclado.",
+      "**Do** respetar movimiento reducido: sin transiciones ni animaciones, y desplazamiento automático.",
+      "**Do** usar SVG en los iconos de interfaz y preservar los textos alternativos y la procedencia de las imágenes."
+    ],
+    "donts": [
+      "**Don't** convertir las etiquetas conservadas en una pauta para añadir nuevos encabezados decorativos encima de títulos.",
+      "**Don't** trasladar el volumen de BMO a sombras permanentes en cada panel de contenido.",
+      "**Don't** ocultar textos, secciones o criterios para resolver una composición estrecha.",
+      "**Don't** adoptar las flechas de texto heredadas ni el favicon anterior como nuevos tokens o patrones de iconografía."
+    ]
+  }
+}
