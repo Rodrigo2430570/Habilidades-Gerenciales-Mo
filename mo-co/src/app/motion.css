@@ -1,0 +1,76 @@
+/* The base page stays visible. Hero choreography runs only after hydration;
+   scroll motion uses the Web Animations API when a block enters view. */
+:root{--motion-ease:cubic-bezier(.16,1,.3,1);--motion-standard:cubic-bezier(.4,0,.2,1);--hero-depth:0px}
+.hero__mark .hero__mark-name{font:700 1.1rem 'Chakra Petch',sans-serif;color:var(--mint);letter-spacing:normal}
+.hero__title-mask{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hero__title-line{display:block}
+.hero__cta{display:inline-block}
+.hero__mascot-entry{position:relative;z-index:1;width:min(100%,530px);align-self:flex-end}
+.hero__mascot-parallax,.hero__mascot-reactive,.hero__mascot-hover,.hero__mascot-float{width:100%}
+.hero__mascot-float img{width:100%}
+.section-heading__word-mask{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.055em;margin-bottom:-.055em}
+.section-heading__word-mask>span{display:inline-block}
+
+@keyframes mo-hero-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes mo-hero-line{from{opacity:0;transform:translateY(110%)}to{opacity:1;transform:translateY(0)}}
+@keyframes mo-hero-lead{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes mo-hero-mascot{from{opacity:0;transform:translateY(30px) scale(.96) rotate(1deg)}to{opacity:1;transform:translateY(0) scale(1) rotate(0)}}
+@keyframes mo-hero-word{from{opacity:0;scale:1.04}to{opacity:1;scale:1}}
+@keyframes mo-mascot-breathe{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(.4deg)}}
+@keyframes mo-line-draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes mo-org-line{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+@media(prefers-reduced-motion:no-preference){
+  .motion-ready .hero__mark-name{animation:mo-hero-rise .52s var(--motion-ease) 0s both}
+  .motion-ready .hero__mark-tag{animation:mo-hero-rise .52s var(--motion-ease) .15s both}
+  .motion-ready .hero__title-mask:first-child .hero__title-line{animation:mo-hero-line .75s var(--motion-ease) .3s both}
+  .motion-ready .hero__title-mask:last-child .hero__title-line{animation:mo-hero-line .75s var(--motion-ease) .45s both}
+  .motion-ready .hero__lead{animation:mo-hero-lead .66s var(--motion-ease) .65s both}
+  .motion-ready .hero__cta{animation:mo-hero-lead .62s var(--motion-ease) .8s both}
+  .motion-ready .hero__mascot-entry{animation:mo-hero-mascot .9s var(--motion-ease) .52s both}
+  .motion-ready .hero__mascot-parallax{transform:translate3d(0,var(--mascot-scroll-y,0px),0)}
+  .motion-ready .hero__mascot-reactive{transform:translate3d(var(--mascot-pointer-x,0px),var(--mascot-pointer-y,0px),0) rotate(var(--mascot-pointer-rotate,0deg));transition:transform .3s var(--motion-ease)}
+  .motion-ready .hero__art-word{animation:mo-hero-word .9s var(--motion-ease) .45s both;transform:translateY(var(--hero-depth))}
+  .motion-ready.hero-visible .hero__mascot-float{animation:mo-mascot-breathe 6s ease-in-out 1.55s infinite}
+  .action-block{position:relative;overflow:hidden}
+  .action-block:before{content:'';position:absolute;left:45px;right:45px;top:0;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left}
+  .action-block:has(.action-grid.is-revealing):before{animation:mo-line-draw .85s var(--motion-ease) both}
+  .org-chart__branches:before{transform-origin:top}
+  .org-chart.is-revealing .org-chart__branches:before{animation:mo-org-line .65s var(--motion-ease) .2s both}
+  .process-grid{position:relative}
+  .process-grid:before{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left}
+  .process-grid.is-revealing:before{animation:mo-line-draw .8s var(--motion-ease) both}
+}
+
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .motion-ready .hero__mascot-hover{transition:transform .3s var(--motion-ease)}
+  .motion-ready .hero__mascot-hover:hover{transform:translateY(-4px) scale(1.01)}
+  .surface-card{transition:transform .3s var(--motion-ease)}
+  .surface-card:hover{transform:translateY(-4px)}
+  .button svg{transition:transform .25s var(--motion-ease)}
+  .button:hover svg{transform:translate(3px,-3px)}
+  .desktop-nav a{position:relative}
+  .desktop-nav a:after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--signal);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--motion-ease)}
+  .desktop-nav a:hover:after,.desktop-nav a[aria-current="location"]:after{transform:scaleX(1)}
+}
+.desktop-nav a[aria-current="location"],.mobile-nav a[aria-current="location"]{color:var(--white)}
+.site-header{transition:background .25s var(--motion-standard),box-shadow .25s var(--motion-standard)}
+.site-header.is-scrolled{background:rgb(16 46 56 / .97);box-shadow:0 8px 20px #0002;backdrop-filter:blur(7px)}
+.work-lead{position:sticky;top:114px;align-self:start}
+
+@media(max-width:850px){.work-lead{position:static}.site-header.is-scrolled{backdrop-filter:none}}
+@media(max-width:650px){
+  @keyframes mo-mascot-breathe-mobile{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(.2deg)}}
+  @keyframes mo-hero-mascot-mobile{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes mo-hero-lead-mobile{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+  .motion-ready .hero__mascot-entry{animation-name:mo-hero-mascot-mobile}
+  .motion-ready.hero-visible .hero__mascot-float{animation-name:mo-mascot-breathe-mobile}
+  .motion-ready .hero__lead,.motion-ready .hero__cta{animation-name:mo-hero-lead-mobile}
+  .action-block:before{left:20px;right:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  .button:hover,.surface-card:hover{transform:none}
+  .button:hover svg{transform:none}
+  .site-header{transition:none}
+  .site-header.is-scrolled{backdrop-filter:none}
+}

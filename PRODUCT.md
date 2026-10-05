@@ -27,8 +27,8 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 ## Operating Context
 
 - Proyecto académico elaborado a partir de `U1 A2. Planeación estratégica_Eqverde.pdf`.
-- La primera entrega incorpora las páginas 2–6: filosofía empresarial, análisis FODA y objetivos SMART.
-- El sitio existente está en `mo-co/dist/index.html`, con estilos y comportamiento en archivos separados. Es una página estática de HTML, CSS y JavaScript sin dependencias de compilación.
+- La versión actual incorpora las páginas 2–10: filosofía empresarial, análisis FODA, objetivos SMART, estrategias y planes de acción.
+- El sitio fuente está en `mo-co/src/` con Next.js, TypeScript y Tailwind CSS. `mo-co/dist/` contiene la exportación estática para el alojamiento existente.
 - La guía de ejecución local está en `mo-co/README.md`; puede servirse desde `mo-co` con `python -m http.server 4173 --bind 127.0.0.1 --directory dist`.
 - Impeccable se utilizará para revisar, rediseñar y pulir la interfaz conforme avance el proyecto.
 
@@ -36,9 +36,10 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 
 ### Alcance existente
 
-- **Nuestra esencia:** misión, visión y cinco valores.
-- **Nuestro horizonte:** 22 puntos del análisis, distribuidos en fortalezas, oportunidades, debilidades y amenazas.
-- **Compromisos de futuro:** tres objetivos con indicadores, plazos y 15 criterios consultables en desplegables.
+- **Nuestra estrategia:** misión, visión, cinco valores, 22 puntos FODA, tres objetivos SMART, estrategias y planes de acción.
+- **Nuestra organización:** responsables y frentes de las iniciativas documentadas; el organigrama general sigue pendiente.
+- **Nuestra forma de trabajar:** principios y colaboración que pueden sustentarse en la planeación; las políticas formales aún no están documentadas.
+- **Nuestro compromiso:** estándares derivados de los objetivos, metas previstas y verificaciones especificadas en los planes.
 - Navegación entre secciones, enlaces de regreso al inicio y lectura del contenido sin depender de JavaScript.
 - Sitio informativo; actualmente no incluye cuentas, formularios, backend ni recopilación de datos.
 
@@ -52,8 +53,8 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 
 ### Decisiones abiertas y alcance futuro
 
-- La estructura, los departamentos y la forma de trabajo forman parte de la información que el público desea conocer. Su contenido y su incorporación concreta todavía no están definidos ni autorizados para esta inicialización.
-- Las estrategias y planes de acción de las páginas 7–10 no forman parte de la primera entrega. Añadirlos requiere una solicitud posterior.
+- La estructura, los departamentos y la forma de trabajo forman parte de la información que el público desea conocer. La planeación solo documenta los responsables y frentes de tres iniciativas. Completar el organigrama y las políticas requiere datos adicionales.
+- Las estrategias y planes de acción de las páginas 7–10 se incorporaron por solicitud posterior del usuario.
 - No hay nuevas fechas de inicio, resultados alcanzados ni datos organizacionales confirmados. No inventarlos para completar la página.
 - Presentarse como una empresa dentro de la ficción no autoriza retirar automáticamente el aviso académico y de sitio no oficial que ya existe.
 
@@ -68,11 +69,12 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 ## Evidence on Hand
 
 - `U1 A2. Planeación estratégica_Eqverde.pdf`: fuente de la planeación y de sus textos.
-- `mo-co/dist/index.html`: contenido, estructura y funcionalidades actuales.
-- `mo-co/dist/styles.css` y `mo-co/dist/app.js`: implementación visual y mejoras de navegación.
+- `mo-co/src/app/page.tsx` y `mo-co/src/app/globals.css`: contenido, estructura e implementación visual actuales.
+- `mo-co/dist/index.html`: exportación estática vigente para alojamiento.
 - `mo-co/dist/assets/mundo-mo.png`: ilustración generada para el proyecto; no es un recurso oficial de la franquicia.
 - `mo-co/docs/decisiones.md`: correspondencia entre presentación y sitio, referencias corporativas y procedencia de la ilustración.
-- `mo-co/docs/verificacion.md`: comprobaciones registradas de la primera entrega; no equivalen a una auditoría vigente de cualquier edición futura.
+- `mo-co/docs/design-audit.md`: referencias, trazabilidad de contenido y límites de la versión actual.
+- `mo-co/docs/verificacion.md`: comprobaciones históricas de la primera entrega; no equivalen a una auditoría vigente.
 - `mo-co/.openai/hosting.json`: identidad registrada de Sites. Su existencia no acredita una publicación en línea completada.
 
 No se han proporcionado clientes reales, testimonios, certificaciones, métricas de desempeño ni evidencia de afiliación oficial. Los porcentajes de los compromisos son metas, no resultados.
