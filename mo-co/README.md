@@ -26,11 +26,12 @@ python -m http.server 4173 --bind 127.0.0.1 --directory dist
 - `src/app/{estrategia,organizacion,trabajo,compromiso}/page.tsx`: páginas interiores.
 - `src/components/sections/CompanySections.tsx`: contenido empresarial procedente de la planeación.
 - `src/components/sections/Visuals.tsx`: línea de plazos y gráfico de metas previstas.
+- `src/components/graphics/BmoMotif.tsx`: motivos SVG transparentes inspirados en la pantalla y controles de BMO.
 - `src/app/globals.css`: estilos responsivos y tokens de la paleta existente.
 - `src/app/multipage.css`: composición de portada, páginas interiores y gráficos.
 - `src/components/ui/`: botones y superficies reutilizables.
 - `src/components/sections/`: hero, filosofía y galería editorial.
-- `public/assets/`: ilustraciones y fuentes locales, además de dos nuevas escenas editoriales de BMO.
+- `public/assets/`: ilustraciones y fuentes locales, además de dos escenas editoriales de BMO. La ilustración de Ooo permanece como recurso del proyecto, pero ya no se repite en la interfaz.
 - `docs/design-audit.md`: referencias, evidencia y límites del contenido.
 - `docs/design-tokens.md`: paleta, tipografía, espacio y componentes.
 - `docs/component-inventory.md`: inventario de componentes.

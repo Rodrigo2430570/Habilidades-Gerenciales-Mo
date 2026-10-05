@@ -6,10 +6,12 @@
 | `Card` | `src/components/ui/Card.tsx` | Superficie reutilizable con cuatro tonos de la marca. |
 | `Hero` | `src/components/sections/Hero.tsx` | Portada empresarial con propósito e imagen MO. |
 | `FeatureGrid` | `src/components/sections/FeatureGrid.tsx` | Misión, visión y cinco valores. |
-| `EditorialGallery` | `src/components/sections/EditorialGallery.tsx` | Cierre narrativo con la ilustración local de Ooo. |
+| `EditorialGallery` | `src/components/sections/EditorialGallery.tsx` | Cierre narrativo con un motivo vectorial sin fondo. |
+| `BmoMotif` | `src/components/graphics/BmoMotif.tsx` | Cuatro composiciones SVG originales con pantalla, cruz, botones y circuitos. |
 | `Navigation` | `src/components/sections/Navigation.tsx` | Rutas principales, página activa y menú móvil que se cierra al elegir destino. |
 | `PageIntro` | `src/components/sections/PageIntro.tsx` | Entrada visual, título H1 y enlace de regreso para páginas interiores. |
 | `StoryImage` | `src/components/sections/Visuals.tsx` | Pausa editorial con imagen y pie contextual. |
+| `GraphicStory` | `src/components/sections/Visuals.tsx` | Pausa visual sin imagen de fondo para la página de trabajo. |
 | `PlanTimeline` | `src/components/sections/Visuals.tsx` | Plazos previstos de las tres iniciativas. |
 | `TargetChart` | `src/components/sections/Visuals.tsx` | Umbrales previstos sin presentar avance alcanzado. |
 | `SectionHeading` / `BlockHeading` | `src/components/sections/CompanySections.tsx` | Títulos y entradillas del contenido empresarial. |

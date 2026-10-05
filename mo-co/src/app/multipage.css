@@ -22,6 +22,8 @@
 .home-destination--portrait .home-destination__image{background:var(--mint)}
 .home-destination--portrait .home-destination__image img{object-fit:contain;object-position:center bottom;padding-top:20px}
 .home-destination--landscape .home-destination__image img{object-position:center}
+.home-destination--graphic .home-destination__image{display:grid;place-items:center;background:transparent;padding:20px}
+.home-destination--graphic .home-destination__image .bmo-motif{width:min(100%,420px);height:100%}
 
 .page-intro{overflow:hidden}
 .page-intro--navy{background:var(--navy);color:var(--paper)}
@@ -39,6 +41,8 @@
 .page-intro--contain .page-intro__visual{background:var(--mint)}
 .page-intro--contain .page-intro__visual img{object-fit:contain;object-position:center bottom;max-height:560px}
 .page-intro--paper .page-intro__visual{background:var(--mint)}
+.page-intro__visual--graphic,.page-intro--paper .page-intro__visual--graphic{display:grid;place-items:center;background:transparent;padding:25px}
+.page-intro__visual--graphic .bmo-motif{width:min(100%,650px);height:min(100%,520px)}
 .page-jump{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--line)}
 .page-jump a{padding:24px 25px 24px 0;margin-right:25px;color:var(--green);font-size:.8rem;font-weight:800;text-decoration:none}
 .page-jump a:hover{text-decoration:underline}
@@ -47,6 +51,13 @@
 .story-image{overflow:hidden;background:var(--navy);border-radius:12px}
 .story-image img{width:100%;max-height:670px;aspect-ratio:1.8;object-fit:cover}
 .story-image figcaption{padding:17px 24px;color:var(--paper);font-size:.68rem;font-weight:800;letter-spacing:.1em}
+.graphic-story{padding-block:30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.graphic-story .bmo-motif{display:block;width:100%;max-height:480px}
+.graphic-story figcaption{margin-top:18px;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.1em}
+.bmo-motif{display:block;max-width:100%;overflow:visible}
+.editorial__graphic{align-self:center;min-width:0}
+.editorial__graphic .bmo-motif{width:100%;max-height:560px}
+.editorial__graphic figcaption{margin-top:10px;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-align:right}
 .plan-timeline,.target-chart{padding:clamp(30px,4vw,60px);background:var(--white);border-radius:12px}
 .plan-timeline__heading,.target-chart__heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:40px}
 .plan-timeline__heading h3,.target-chart__heading h3{font-size:clamp(2rem,3vw,3.2rem);letter-spacing:-.025em}

@@ -7,7 +7,7 @@ El sitio conserva la identidad existente: petróleo profundo, menta MO, amarillo
 - Predominio corporativo y limpio: titulares amplios, espacio generoso, cards planas y reglas finas.
 - Momentos editoriales: hero con retrato MO, numeración de apartados, secuencias de estrategias y galería panorámica.
 - Cada página interior tiene título H1, introducción breve, contenido propio y navegación compartida. La portada conserva el Hero original y muestra solo una síntesis.
-- Las escenas de BMO en el taller y el archivo separan momentos de lectura. La línea de plazos y las marcas de meta muestran previsiones, nunca avance alcanzado.
+- Las escenas de BMO en el taller y el archivo separan momentos de lectura. Los cuatro motivos vectoriales transparentes retoman la pantalla, la cruz, los botones y los circuitos sin repetir la misma ilustración. La línea de plazos y las marcas de meta muestran previsiones, nunca avance alcanzado.
 - Las metas numéricas siempre se identifican como previstas, no como resultados.
 - El Hero concentra la secuencia de entrada; la lectura posterior usa reveals de una sola vez y microinteracciones contenidas. Véase `mo-co/docs/motion-system.md`.
 
