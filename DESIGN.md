@@ -6,8 +6,8 @@ El sitio conserva la identidad existente: petróleo profundo, menta MO, amarillo
 
 - Predominio corporativo y limpio: titulares amplios, espacio generoso, cards planas y reglas finas.
 - Momentos editoriales: hero con retrato MO, numeración de apartados, secuencias de estrategias y galería panorámica.
-- Cada página interior tiene título H1, introducción breve, contenido propio y navegación compartida. La portada conserva el Hero original y muestra solo una síntesis.
-- Las escenas de BMO en el taller y el archivo separan momentos de lectura. Los cuatro motivos vectoriales transparentes retoman la pantalla, la cruz, los botones y los circuitos sin repetir la misma ilustración. La línea de plazos y las marcas de meta muestran previsiones, nunca avance alcanzado.
+- Cada página interior tiene título H1, introducción breve, contenido propio, navegación compartida, regreso persistente al índice y enlaces anterior/siguiente. La portada conserva el Hero original y muestra solo una síntesis.
+- BMO se conserva en el Hero. Las escenas interiores muestran la antigua fábrica en las Tierras Baldías, la comunidad MO subterránea y una interpretación del archivo técnico. El diagrama de compromisos representa funcionamiento, información y conocimiento. La línea de plazos y las marcas de meta muestran previsiones, nunca avance alcanzado.
 - Las metas numéricas siempre se identifican como previstas, no como resultados.
 - El Hero concentra la secuencia de entrada; la lectura posterior usa reveals de una sola vez y microinteracciones contenidas. Véase `mo-co/docs/motion-system.md`.
 
@@ -21,4 +21,4 @@ El sitio usa un solo H1, encabezados semánticos, enlaces por ancla, menú móvi
 
 ## Referencias y procedencia
 
-[`mo-co/docs/design-audit.md`](mo-co/docs/design-audit.md) describe los patrones tomados como inspiración de Apple Services y landonorris.com. Se conservaron las ilustraciones y fuentes locales, y se añadieron dos escenas originales de BMO para las páginas interiores. No se incorporaron logos, textos ni assets de las referencias web.
+[`mo-co/docs/design-audit.md`](mo-co/docs/design-audit.md) describe los patrones tomados como inspiración de Apple Services y landonorris.com. Se conservaron la imagen inicial de BMO y las fuentes locales. Las escenas interiores se sustituyeron por tres interpretaciones de MO Co. basadas en el entorno de «Be More»; véase `mo-co/docs/recorrido-y-contexto.md`. No se incorporaron logos, textos ni assets de las referencias web.

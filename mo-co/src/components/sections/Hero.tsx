@@ -26,6 +26,6 @@ export function Hero() {
         <p>UN PROPÓSITO EN CADA CIRCUITO</p>
       </div>
     </div>
-    <div className="shell hero__foot"><span>INSTITUTO DE ROBÓTICA DE OOO</span><a href="#explora-title">Explora MO Co.</a></div>
+    <div className="shell hero__foot"><span>FÁBRICA DE ROBOTS DE OOO</span><a href="#explora-title">Explora MO Co.</a></div>
   </section>;
 }

@@ -1,11 +1,5 @@
-import { BmoMotif } from '@/components/graphics/BmoMotif';
-
 export function StoryImage({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return <figure className="story-image" data-reveal="image"><img src={src} alt={alt} loading="lazy" width="1536" height="1024" /><figcaption>{caption}</figcaption></figure>;
-}
-
-export function GraphicStory({ caption }: { caption: string }) {
-  return <figure className="graphic-story"><BmoMotif variant="collaboration" /><figcaption>{caption}</figcaption></figure>;
 }
 
 const plans = [

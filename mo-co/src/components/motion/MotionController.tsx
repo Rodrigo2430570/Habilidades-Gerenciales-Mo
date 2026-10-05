@@ -57,30 +57,10 @@ export function MotionController() {
 
     function reveal(target: HTMLElement) {
       target.classList.add('is-revealing');
-      const rise = window.innerWidth <= 650 ? 16 : 24;
-      if (target.dataset.stagger !== undefined) {
-        [...target.children].forEach((child, index) => {
-          play(child, [{ opacity: 0, transform: `translateY(${rise}px)` }, { opacity: 1, transform: 'translateY(0)' }], 610, Math.min(index, 4) * 85);
-        });
-      } else if (target.dataset.reveal === 'heading') {
-        play(target.querySelector('.section-number'), [{ opacity: 0, transform: `translateY(${rise}px) scale(.94)` }, { opacity: 1, transform: 'translateY(0) scale(1)' }], 630);
-        target.querySelectorAll('.section-heading__word-mask > span').forEach((word, index) => {
-          play(word, [{ opacity: 0, transform: 'translateY(110%)' }, { opacity: 1, transform: 'translateY(0)' }], 720, 110 + index * 95);
-        });
-        play(target.querySelector('p'), [{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }], 560, 300);
-      } else if (target.dataset.reveal === 'image') {
-        play(target, [{ clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], 900);
-        play(target.querySelector('img'), [{ transform: 'scale(1.05)' }, { transform: 'scale(1)' }], 1000);
-      } else if (target.dataset.reveal === 'org') {
-        target.classList.add('is-revealing');
-        play(target.querySelector('.org-chart__lead'), [{ opacity: 0, transform: 'translateY(20px)' }, { opacity: 1, transform: 'translateY(0)' }], 620);
-        target.querySelectorAll('.org-chart__branches > div').forEach((branch, index) => {
-          play(branch, [{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'translateY(0)' }], 600, 320 + index * 90);
-        });
-      } else if (target.dataset.reveal === 'fade') {
-        play(target, [{ opacity: 0 }, { opacity: 1 }], 480);
-      } else {
-        play(target, [{ opacity: 0, transform: `translateY(${rise}px)` }, { opacity: 1, transform: 'translateY(0)' }], 650);
+      // Text remains visible throughout scrolling. Replaying its entrance from
+      // opacity 0 after it is already on screen makes it appear to blink.
+      if (target.dataset.reveal === 'image') {
+        play(target.querySelector('img'), [{ transform: 'scale(1.015)' }, { transform: 'scale(1)' }], 420);
       }
     }
 

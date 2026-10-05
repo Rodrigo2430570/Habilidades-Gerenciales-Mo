@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Arrow } from '../ui/Arrow';
 
 type Props = {
   title: string;
@@ -15,7 +16,7 @@ export function PageIntro({ title, description, image, alt, visual, headingId, t
   return <header className={`page-intro page-intro--${theme} page-intro--${imageMode}`}>
     <div className="shell page-intro__grid">
       <div className="page-intro__copy">
-        <a href="/" className="page-intro__back">← Inicio</a>
+        <a href="/#explora-title" className="page-intro__back"><Arrow direction="left" /> Todos los apartados</a>
         <h1 id={headingId}>{title}</h1>
         <p>{description}</p>
       </div>

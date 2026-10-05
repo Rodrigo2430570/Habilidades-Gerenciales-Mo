@@ -7,8 +7,8 @@ export const metadata: Metadata = { title: 'Organización | MO Co.', description
 
 export default function OrganizationPage() {
   return <main id="contenido">
-    <PageIntro headingId="organization-page-title" title="Un equipo para cada misión." description="Moe y las unidades MO especializadas colaboran en mantenimiento, sistemas y formación." image="/assets/bmo-institute.png" alt="Robot MO de color verde" theme="mint" imageMode="contain" />
+    <PageIntro headingId="organization-page-title" title="Un equipo para cada misión." description="Moe y las unidades MO especializadas colaboran en mantenimiento, sistemas y formación." image="/assets/mo-comunidad.png" alt="Unidades MO de distintas formas conviven en las galerías subterráneas de la fábrica" theme="mint" />
     <OrganizationSection />
-    <div className="shell page-visual page-visual--after"><StoryImage src="/assets/bmo-taller.png" alt="BMO trabaja en el mantenimiento de una unidad MO" caption="CADA FUNCIÓN CONTRIBUYE AL CUIDADO DE LOS MO" /></div>
+    <div className="shell page-visual page-visual--after"><StoryImage src="/assets/mo-memoria.png" alt="Herramientas y documentación para conservar las capacidades de los MO" caption="CADA FUNCIÓN CONTRIBUYE AL CUIDADO DE LOS MO" /></div>
   </main>;
 }

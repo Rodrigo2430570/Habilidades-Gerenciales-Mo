@@ -1,18 +1,29 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import { companyPages } from './site-map';
 
-const navigation = [
-  ['/estrategia/', 'Estrategia'],
-  ['/organizacion/', 'Organización'],
-  ['/trabajo/', 'Forma de trabajar'],
-  ['/compromiso/', 'Compromiso'],
-];
+const navigation = [['/', 'Inicio'], ...companyPages.map(page => [page.href, page.label])];
 
 export function Navigation() {
   const mobileMenu = useRef<HTMLDetailsElement>(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const close = (event: PointerEvent) => {
+      if (event.target instanceof Node && mobileMenu.current && !mobileMenu.current.contains(event.target)) mobileMenu.current.open = false;
+    };
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && mobileMenu.current?.open) {
+        mobileMenu.current.open = false;
+        mobileMenu.current.querySelector('summary')?.focus();
+      }
+    };
+    document.addEventListener('pointerdown', close);
+    document.addEventListener('keydown', escape);
+    return () => { document.removeEventListener('pointerdown', close); document.removeEventListener('keydown', escape); };
+  }, []);
 
   return <header className="site-header"><div className="shell site-header__inner">
     <a className="brand" href="/" aria-label="MO Co., ir al inicio"><span className="brand__symbol">MO<span>•</span></span><span className="brand__name">MO Co.<small>CREADOS PARA CONECTAR</small></span></a>

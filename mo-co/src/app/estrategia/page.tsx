@@ -7,10 +7,9 @@ export const metadata: Metadata = { title: 'Estrategia | MO Co.', description: '
 
 export default function StrategyPage() {
   return <main id="contenido">
-    <PageIntro headingId="strategy-page-title" title="Cuidar lo que viene." description="Nuestra estrategia une innovación, mantenimiento y preservación del conocimiento para dar continuidad a los MO." image="/assets/bmo-taller.png" alt="BMO revisa una unidad MO en un taller" />
-    <nav className="page-jump shell" aria-label="En esta página"><a href="#filosofia">Filosofía</a><a href="#panorama">Panorama</a><a href="#objetivos">Objetivos</a><a href="#estrategias">Estrategias</a><a href="#accion">Planes de acción</a></nav>
+    <PageIntro headingId="strategy-page-title" title="Cuidar lo que viene." description="Nuestra estrategia une innovación, mantenimiento y preservación del conocimiento para dar continuidad a los MO." image="/assets/mo-fabrica.png" alt="Interpretación de la fábrica MO en el desierto de las Tierras Baldías" />
     <div className="shell page-visual"><PlanTimeline /></div>
     <StrategySection />
-    <div className="shell page-visual page-visual--after"><StoryImage src="/assets/bmo-archivo.png" alt="BMO archiva un módulo de memoria junto a otras unidades MO" caption="EL CONOCIMIENTO TAMBIÉN SE CUIDA" /></div>
+    <div className="shell page-visual page-visual--after"><StoryImage src="/assets/mo-memoria.png" alt="Archivo técnico con manuales y módulos de memoria en la fábrica MO" caption="EL CONOCIMIENTO TAMBIÉN SE CUIDA" /></div>
   </main>;
 }
