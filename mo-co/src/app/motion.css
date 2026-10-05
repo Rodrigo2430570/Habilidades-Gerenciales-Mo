@@ -51,9 +51,9 @@
   .button:hover svg{transform:translate(3px,-3px)}
   .desktop-nav a{position:relative}
   .desktop-nav a:after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--signal);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--motion-ease)}
-  .desktop-nav a:hover:after,.desktop-nav a[aria-current="location"]:after{transform:scaleX(1)}
+  .desktop-nav a:hover:after,.desktop-nav a[aria-current="page"]:after{transform:scaleX(1)}
 }
-.desktop-nav a[aria-current="location"],.mobile-nav a[aria-current="location"]{color:var(--white)}
+.desktop-nav a[aria-current="page"],.mobile-nav a[aria-current="page"]{color:var(--white)}
 .site-header{transition:background .25s var(--motion-standard),box-shadow .25s var(--motion-standard)}
 .site-header.is-scrolled{background:rgb(16 46 56 / .97);box-shadow:0 8px 20px #0002;backdrop-filter:blur(7px)}
 .work-lead{position:sticky;top:114px;align-self:start}

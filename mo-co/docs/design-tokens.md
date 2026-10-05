@@ -37,7 +37,9 @@ La paleta y las dos fuentes proceden del sitio existente. Esta ampliación cambi
 - **Button primary:** fondo amarillo señal, tinta petróleo, altura mínima 54px y foco visible.
 - **Button light:** papel sobre superficie oscura.
 - **Card white/mint/dark/paper:** misma estructura y radio; la variante `paper` usa borde fino.
+- **Page layout:** portada breve con destinos visuales; páginas interiores con intro editorial, imagen amplia, título, contenido y regreso al inicio.
 - **Section layout:** número grande, título y entradilla; subapartados con título explícito y una nota corta.
+- **Gráficos:** barras de duración y marcas de meta en verde; etiquetas explícitas distinguen planes de resultados.
 - **Responsive:** 2–3 columnas en escritorio según contenido; una columna o 2 columnas en móvil según legibilidad.
 
 ## Motion

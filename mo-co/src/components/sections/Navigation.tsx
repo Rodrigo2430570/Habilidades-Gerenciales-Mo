@@ -1,20 +1,22 @@
 'use client';
 
 import { useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
-  ['#estrategia', 'Nuestra estrategia'],
-  ['#organizacion', 'Nuestra organización'],
-  ['#trabajo', 'Nuestra forma de trabajar'],
-  ['#compromiso', 'Nuestro compromiso'],
+  ['/estrategia/', 'Estrategia'],
+  ['/organizacion/', 'Organización'],
+  ['/trabajo/', 'Forma de trabajar'],
+  ['/compromiso/', 'Compromiso'],
 ];
 
 export function Navigation() {
   const mobileMenu = useRef<HTMLDetailsElement>(null);
+  const pathname = usePathname();
 
   return <header className="site-header"><div className="shell site-header__inner">
-    <a className="brand" href="#inicio" aria-label="MO Co., ir al inicio"><span className="brand__symbol">MO<span>•</span></span><span className="brand__name">MO Co.<small>CREADOS PARA CONECTAR</small></span></a>
-    <nav className="desktop-nav" aria-label="Navegación principal">{navigation.map(([href, label]) => <a key={href} href={href}>{label}</a>)}</nav>
-    <details className="mobile-nav" ref={mobileMenu}><summary>Menú <span aria-hidden="true">+</span></summary><nav aria-label="Navegación móvil">{navigation.map(([href, label]) => <a key={href} href={href} onClick={() => { if (mobileMenu.current) mobileMenu.current.open = false; }}>{label}</a>)}</nav></details>
+    <a className="brand" href="/" aria-label="MO Co., ir al inicio"><span className="brand__symbol">MO<span>•</span></span><span className="brand__name">MO Co.<small>CREADOS PARA CONECTAR</small></span></a>
+    <nav className="desktop-nav" aria-label="Navegación principal">{navigation.map(([href, label]) => <a key={href} href={href} aria-current={pathname === href || `${pathname}/` === href ? 'page' : undefined}>{label}</a>)}</nav>
+    <details className="mobile-nav" ref={mobileMenu}><summary>Menú <span aria-hidden="true">+</span></summary><nav aria-label="Navegación móvil">{navigation.map(([href, label]) => <a key={href} href={href} aria-current={pathname === href || `${pathname}/` === href ? 'page' : undefined} onClick={() => { if (mobileMenu.current) mobileMenu.current.open = false; }}>{label}</a>)}</nav></details>
   </div></header>;
 }

@@ -28,7 +28,7 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 
 - Proyecto académico elaborado a partir de `U1 A2. Planeación estratégica_Eqverde.pdf`.
 - La versión actual incorpora las páginas 2–10: filosofía empresarial, análisis FODA, objetivos SMART, estrategias y planes de acción.
-- El sitio fuente está en `mo-co/src/` con Next.js, TypeScript y Tailwind CSS. `mo-co/dist/` contiene la exportación estática para el alojamiento existente.
+- El sitio fuente está en `mo-co/src/` con Next.js, TypeScript y Tailwind CSS. La portada enlaza a cuatro páginas interiores; `mo-co/dist/` contiene la exportación estática para el alojamiento existente.
 - La guía de ejecución local está en `mo-co/README.md`; puede servirse desde `mo-co` con `python -m http.server 4173 --bind 127.0.0.1 --directory dist`.
 - Impeccable se utilizará para revisar, rediseñar y pulir la interfaz conforme avance el proyecto.
 
@@ -40,7 +40,7 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 - **Nuestra organización:** responsables y frentes de las iniciativas documentadas; el organigrama general sigue pendiente.
 - **Nuestra forma de trabajar:** principios y colaboración que pueden sustentarse en la planeación; las políticas formales aún no están documentadas.
 - **Nuestro compromiso:** estándares derivados de los objetivos, metas previstas y verificaciones especificadas en los planes.
-- Navegación entre secciones, enlaces de regreso al inicio y lectura del contenido sin depender de JavaScript.
+- Navegación entre páginas y subapartados, enlaces de regreso al inicio y lectura del contenido sin depender de JavaScript.
 - Sitio informativo; actualmente no incluye cuentas, formularios, backend ni recopilación de datos.
 
 ### Restricciones confirmadas por el usuario

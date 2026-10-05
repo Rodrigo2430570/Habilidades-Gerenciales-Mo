@@ -1,12 +1,13 @@
 # Sistema visual de MO Co.
 
-La home renovada conserva la identidad existente: petróleo profundo, menta MO, amarillo señal, papel frío, titulares Chakra Petch y texto Manrope. La nueva arquitectura divide el contenido en cuatro grandes apartados empresariales y suma una composición editorial con imágenes propias del proyecto.
+El sitio conserva la identidad existente: petróleo profundo, menta MO, amarillo señal, papel frío, titulares Chakra Petch y texto Manrope. La portada presenta cuatro destinos visuales; cada apartado empresarial tiene su propia página, con imágenes amplias y gráficos basados en los planes documentados.
 
 ## Dirección
 
 - Predominio corporativo y limpio: titulares amplios, espacio generoso, cards planas y reglas finas.
 - Momentos editoriales: hero con retrato MO, numeración de apartados, secuencias de estrategias y galería panorámica.
-- Cada apartado principal tiene título visible y una introducción breve para poder capturarlo con claridad.
+- Cada página interior tiene título H1, introducción breve, contenido propio y navegación compartida. La portada conserva el Hero original y muestra solo una síntesis.
+- Las escenas de BMO en el taller y el archivo separan momentos de lectura. La línea de plazos y las marcas de meta muestran previsiones, nunca avance alcanzado.
 - Las metas numéricas siempre se identifican como previstas, no como resultados.
 - El Hero concentra la secuencia de entrada; la lectura posterior usa reveals de una sola vez y microinteracciones contenidas. Véase `mo-co/docs/motion-system.md`.
 
@@ -20,4 +21,4 @@ El sitio usa un solo H1, encabezados semánticos, enlaces por ancla, menú móvi
 
 ## Referencias y procedencia
 
-[`mo-co/docs/design-audit.md`](mo-co/docs/design-audit.md) describe los patrones tomados como inspiración de Apple Services y landonorris.com. Las ilustraciones y fuentes servidas son las que ya estaban en el proyecto; no se incorporaron logos, textos ni assets de esas referencias.
+[`mo-co/docs/design-audit.md`](mo-co/docs/design-audit.md) describe los patrones tomados como inspiración de Apple Services y landonorris.com. Se conservaron las ilustraciones y fuentes locales, y se añadieron dos escenas originales de BMO para las páginas interiores. No se incorporaron logos, textos ni assets de las referencias web.

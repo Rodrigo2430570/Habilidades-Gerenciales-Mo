@@ -7,18 +7,15 @@
 | `Hero` | `src/components/sections/Hero.tsx` | Portada empresarial con propósito e imagen MO. |
 | `FeatureGrid` | `src/components/sections/FeatureGrid.tsx` | Misión, visión y cinco valores. |
 | `EditorialGallery` | `src/components/sections/EditorialGallery.tsx` | Cierre narrativo con la ilustración local de Ooo. |
-| `Navigation` | `src/components/sections/Navigation.tsx` | Cuatro anclas principales y menú móvil que se cierra al elegir sección. |
-| `SectionHeading` | `src/app/page.tsx` | Número, título y entradilla de cada apartado principal. |
-| `BlockHeading` | `src/app/page.tsx` | Título y nota de subapartado. |
-| `SWOTGrid` | `src/app/page.tsx` | Cuatro cuadrantes FODA. |
-| `GoalsGrid` | `src/app/page.tsx` | Tres objetivos SMART y criterios nativos desplegables. |
-| `StrategyList` | `src/app/page.tsx` | Tres líneas estratégicas numeradas. |
-| `ActionGrid` | `src/app/page.tsx` | Pasos, responsables, recursos y plazos. |
-| `OrganizationChart` | `src/app/page.tsx` | Estructura de ejecución de las iniciativas documentadas. |
-| `WorkStyleSection` | `src/app/page.tsx` | Cultura, liderazgo, comunicación, motivación y equipo. |
-| `KPIGrid` | `src/app/page.tsx` | Metas previstas con cifras del PDF. |
-| `ProcessGrid` | `src/app/page.tsx` | Verificaciones previstas en el plan. |
-| `Footer` | `src/app/page.tsx` | Marca, contexto y regreso al inicio. |
-| `MotionController` | `src/components/motion/MotionController.tsx` | Coordina reveals, sección activa, visibilidad del Hero y movimiento reducido. |
+| `Navigation` | `src/components/sections/Navigation.tsx` | Rutas principales, página activa y menú móvil que se cierra al elegir destino. |
+| `PageIntro` | `src/components/sections/PageIntro.tsx` | Entrada visual, título H1 y enlace de regreso para páginas interiores. |
+| `StoryImage` | `src/components/sections/Visuals.tsx` | Pausa editorial con imagen y pie contextual. |
+| `PlanTimeline` | `src/components/sections/Visuals.tsx` | Plazos previstos de las tres iniciativas. |
+| `TargetChart` | `src/components/sections/Visuals.tsx` | Umbrales previstos sin presentar avance alcanzado. |
+| `SectionHeading` / `BlockHeading` | `src/components/sections/CompanySections.tsx` | Títulos y entradillas del contenido empresarial. |
+| `SWOTGrid`, `GoalsGrid`, `StrategyList`, `ActionGrid` | `src/components/sections/CompanySections.tsx` | Análisis y planes de la estrategia. |
+| `OrganizationChart`, `WorkStyleSection`, `KPIGrid`, `ProcessGrid` | `src/components/sections/CompanySections.tsx` | Organización, prácticas y verificaciones. |
+| `Footer` | `src/app/layout.tsx` | Marca, contexto y regreso al inicio en todas las páginas. |
+| `MotionController` | `src/components/motion/MotionController.tsx` | Coordina reveals, visibilidad del Hero y movimiento reducido en cada ruta. |
 
-Los bloques específicos permanecen juntos en `page.tsx` para que la fuente de contenido sea fácil de cotejar con la planeación. `Card`, `Button` y las tres secciones visuales son reutilizables entre páginas futuras.
+Los bloques de contenido permanecen juntos en `CompanySections.tsx` para cotejarlos con la planeación. La portada enlaza a las cuatro páginas interiores sin repetir todos sus textos.

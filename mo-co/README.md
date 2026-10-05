@@ -1,6 +1,6 @@
 # MO Co. — Tecnología con corazón
 
-Home empresarial de MO Co. en Next.js, TypeScript y Tailwind CSS. Presenta estrategia, organización, forma de trabajar y compromiso a partir de la planeación del equipo. Las cifras visibles son metas previstas.
+Sitio empresarial de MO Co. en Next.js, TypeScript y Tailwind CSS. La portada presenta el proyecto y enlaza a cuatro páginas: estrategia, organización, forma de trabajar y compromiso. Las cifras visibles son metas previstas.
 
 ## Desarrollo
 
@@ -18,15 +18,19 @@ npm run build
 python -m http.server 4173 --bind 127.0.0.1 --directory dist
 ```
 
-`npm run build` genera `out/` con Next.js y actualiza `dist/` para el alojamiento estático ya configurado en `.openai/hosting.json`. No hay backend ni formularios.
+`npm run build` genera `out/` con Next.js y actualiza `dist/` para el alojamiento estático ya configurado en `.openai/hosting.json`. Las rutas se exportan como directorios (`/estrategia/`, `/organizacion/`, `/trabajo/`, `/compromiso/`). No hay backend ni formularios.
 
 ## Archivos principales
 
-- `src/app/page.tsx`: contenido empresarial y cuatro apartados.
+- `src/app/page.tsx`: portada y accesos a las cuatro páginas.
+- `src/app/{estrategia,organizacion,trabajo,compromiso}/page.tsx`: páginas interiores.
+- `src/components/sections/CompanySections.tsx`: contenido empresarial procedente de la planeación.
+- `src/components/sections/Visuals.tsx`: línea de plazos y gráfico de metas previstas.
 - `src/app/globals.css`: estilos responsivos y tokens de la paleta existente.
+- `src/app/multipage.css`: composición de portada, páginas interiores y gráficos.
 - `src/components/ui/`: botones y superficies reutilizables.
 - `src/components/sections/`: hero, filosofía y galería editorial.
-- `public/assets/`: ilustraciones y fuentes locales conservadas.
+- `public/assets/`: ilustraciones y fuentes locales, además de dos nuevas escenas editoriales de BMO.
 - `docs/design-audit.md`: referencias, evidencia y límites del contenido.
 - `docs/design-tokens.md`: paleta, tipografía, espacio y componentes.
 - `docs/component-inventory.md`: inventario de componentes.

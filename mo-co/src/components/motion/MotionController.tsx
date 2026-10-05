@@ -1,18 +1,18 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const ease = 'cubic-bezier(0.16, 1, 0.3, 1)';
 
 export function MotionController() {
+  const pathname = usePathname();
   useEffect(() => {
     const root = document.documentElement;
     const header = document.querySelector<HTMLElement>('.site-header');
     const hero = document.querySelector<HTMLElement>('.hero');
     const mascot = hero?.querySelector<HTMLElement>('.hero__mascot-reactive');
     const mascotParallax = hero?.querySelector<HTMLElement>('.hero__mascot-parallax');
-    const sections = [...document.querySelectorAll<HTMLElement>('main > .page-section')];
-    const navLinks = [...document.querySelectorAll<HTMLAnchorElement>('.site-header nav a')];
     const targets = [...document.querySelectorAll<HTMLElement>('[data-reveal], [data-stagger]')];
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const desktop = window.matchMedia('(min-width: 851px)');
@@ -104,16 +104,6 @@ export function MotionController() {
       root.classList.toggle('hero-visible', heroVisible);
       header?.classList.toggle('is-scrolled', window.scrollY > 20);
 
-      let current = '';
-      const readingLine = Math.min(210, innerHeight * .35);
-      for (const section of sections) {
-        if (section.getBoundingClientRect().top <= readingLine) current = section.id;
-      }
-      navLinks.forEach(link => {
-        if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
-      });
-
       if (heroBox && desktop.matches && !reduced.matches) {
         const progress = Math.min(1, Math.max(0, -heroBox.top / Math.max(heroBox.height, 1)));
         root.style.setProperty('--hero-depth', `${Math.round(progress * 24)}px`);
@@ -172,7 +162,7 @@ export function MotionController() {
       mascot?.style.removeProperty('--mascot-pointer-y');
       mascot?.style.removeProperty('--mascot-pointer-rotate');
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
