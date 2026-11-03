@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && node scripts/sync-dist.mjs",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "tsc --module commonjs --target es2020 --resolveJsonModule --esModuleInterop --outDir .test-build --skipLibCheck src/lib/store.ts src/lib/support.ts && node --test tests/store.test.cjs"
   },
   "dependencies": {
     "next": "^15.5.0",

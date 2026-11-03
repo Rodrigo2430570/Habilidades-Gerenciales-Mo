@@ -8,13 +8,13 @@ web
 
 ## Users
 
-El público principal son personas que quieren conocer MO Co. como empresa: su identidad, misión, visión, valores, estructura, departamentos, objetivos y forma de trabajo.
+El público principal son personas que quieren conocer MO Co. como empresa: su identidad, misión, visión, valores, estructura, departamentos, objetivos y forma de trabajo. La ampliación también atiende a visitantes que quieren comparar sus 15 modelos y cuatro paquetes, preparar una solicitud de pedido o encontrar orientación y atención.
 
 El origen académico del proyecto no define la experiencia principal. La página debe leerse y percibirse como el sitio oficial de una empresa real dentro del universo ficticio de Hora de Aventura, no como una presentación escolar.
 
 ## Product Purpose
 
-Presentar a MO Co. mediante un sitio empresarial claro, coherente y fácil de recorrer, basado en la planeación proporcionada por el equipo. Permitir que sus visitantes comprendan qué hace la empresa, qué principios la guían, qué retos reconoce y qué se propone lograr.
+Presentar a MO Co. mediante un sitio empresarial claro, coherente y fácil de recorrer, basado en la planeación y el contenido comercial ficticio proporcionados por el equipo. Permitir que sus visitantes comprendan qué hace la empresa, qué principios la guían, qué retos reconoce y qué se propone lograr; también explorar su oferta y preparar solicitudes locales con sus condiciones visibles.
 
 El éxito consiste en comunicar esa información con fidelidad, identidad propia y una experiencia usable en distintos tamaños de pantalla. No se han definido metas de ventas, conversión ni indicadores de uso.
 
@@ -27,10 +27,11 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 ## Operating Context
 
 - Proyecto académico elaborado a partir de `U1 A2. Planeación estratégica_Eqverde.pdf`.
-- La versión actual incorpora las páginas 2–10: filosofía empresarial, análisis FODA, objetivos SMART, estrategias y planes de acción.
-- El sitio fuente está en `mo-co/src/` con Next.js, TypeScript y Tailwind CSS. La portada enlaza a cuatro páginas interiores; `mo-co/dist/` contiene la exportación estática para el alojamiento existente.
+- La planeación incorporada comprende las páginas 2–10: filosofía empresarial, análisis FODA, objetivos SMART, estrategias y planes de acción. Se conserva en las cuatro páginas empresariales.
+- `mo-co/docs/contenido-aprobado.md`, entregado el 2 de noviembre de 2026, define la ampliación de catálogo, paquetes, bolsa, ayuda y condiciones. Sus precios, características y políticas pertenecen a la oferta ficticia del proyecto.
+- El sitio fuente está en `mo-co/src/` con Next.js, TypeScript y Tailwind CSS. La portada conserva el Hero y los cuatro destinos empresariales, y añade acceso al catálogo y a ayuda. La navegación compartida conecta también productos, paquetes y bolsa; la compilación exporta el sitio estático a `mo-co/dist/` para el alojamiento existente.
 - La guía de ejecución local está en `mo-co/README.md`; puede servirse desde `mo-co` con `python -m http.server 4173 --bind 127.0.0.1 --directory dist`.
-- Impeccable se utilizará para revisar, rediseñar y pulir la interfaz conforme avance el proyecto.
+- Impeccable guía las iteraciones de interfaz dentro del sistema existente, documentado en `DESIGN.md`; esta ampliación conserva su identidad.
 
 ## Capabilities and Constraints
 
@@ -40,8 +41,11 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 - **Nuestra organización:** responsables y frentes de las iniciativas documentadas; el organigrama general sigue pendiente.
 - **Nuestra forma de trabajar:** principios y colaboración que pueden sustentarse en la planeación; las políticas formales aún no están documentadas.
 - **Nuestro compromiso:** estándares derivados de los objetivos, metas previstas y verificaciones especificadas en los planes.
-- Navegación entre páginas y subapartados, enlaces de regreso al inicio y lectura del contenido sin depender de JavaScript.
-- Sitio informativo; actualmente no incluye cuentas, formularios, backend ni recopilación de datos.
+- Navegación entre páginas y subapartados, enlaces de regreso al inicio y lectura del contenido empresarial y las fichas sin depender de JavaScript. La búsqueda, los filtros, la bolsa y las solicitudes locales requieren JavaScript y las capacidades correspondientes del navegador.
+- Sitio estático con catálogo de 15 modelos, cuatro paquetes, fichas, búsqueda y filtros; conserva las cuatro páginas empresariales anteriores.
+- Bolsa de solicitud de pedido sin cobros ni confirmación de compra. Conserva únicamente artículos, cantidades y modalidad de entrega en `localStorage` y permite descargar el resumen.
+- Atención con formulario de consultas, quejas, sugerencias, garantía y cambios. Prepara solicitudes locales en `sessionStorage`, con folio, descarga, consulta por folio y correo y eliminación. El texto se conserva si falla la preparación. No se envían datos a MO ni se anuncia recepción real.
+- No incluye cuentas, backend, servicio operativo de correo, pagos, paquetería ni pedidos. Los correos `.example` son referencias ficticias copiables. Los plazos de atención comenzarían una vez recibida realmente una solicitud, no al prepararla localmente.
 
 ### Restricciones confirmadas por el usuario
 
@@ -50,6 +54,7 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 - Priorizar diseño visual, jerarquía, navegación, experiencia de usuario, adaptación a pantallas y coherencia con MO Co.
 - Mantener el contenido de la planeación; los nombres públicos de los apartados deben resultar naturales para un sitio empresarial.
 - Interpretar futuras solicitudes de revisión o pulido dentro de estas restricciones. Una petición general de rediseño no autoriza por sí sola eliminar contenido o reconstruir el proyecto.
+- No publicar la ampliación ni conectar pagos o mensajería como efecto secundario; el alcance es dejar el código utilizable y revisable.
 
 ### Decisiones abiertas y alcance futuro
 
@@ -65,12 +70,17 @@ La presentación corporativa pertenece a la ficción: no debe convertirse en una
 - Idioma actual del contenido: español.
 - Comunicación orientada a visitantes de una empresa, con denominaciones empresariales para los apartados y una identidad coherente con MO Co.
 - Conservar la página y sus recursos actuales como punto de partida. La paleta, tipografía y composición existentes son evidencia de la implementación, no nuevas restricciones estéticas fijadas por este documento.
+- La ampliación aprobada continúa el sistema petróleo, menta y amarillo, con Chakra Petch y Manrope; mantiene el Hero y las cuatro páginas empresariales.
 
 ## Evidence on Hand
 
 - `U1 A2. Planeación estratégica_Eqverde.pdf`: fuente de la planeación y de sus textos.
 - `mo-co/src/app/page.tsx` y `mo-co/src/app/globals.css`: contenido, estructura e implementación visual actuales.
-- `mo-co/dist/index.html`: exportación estática vigente para alojamiento.
+- `mo-co/src/app/store.css` y `mo-co/src/components/shop/`: extensión visual e interacciones de catálogo, paquetes, bolsa y atención.
+- `mo-co/src/data/products.json`, `mo-co/src/data/service-copy.json`, `mo-co/src/lib/store.ts` y `mo-co/src/lib/support.ts`: fichas, textos aprobados y reglas locales de la ampliación.
+- `mo-co/docs/contenido-aprobado.md` y `mo-co/docs/ampliacion-catalogo.md`: contrato de contenido y alcance de la implementación.
+- `mo-co/docs/catalog-image-production.json` y `mo-co/public/assets/products/`: procedencia y 15 ilustraciones conceptuales del catálogo, generadas individualmente; no son fotografías de productos físicos ni recursos oficiales.
+- `mo-co/dist/index.html`: salida estática de la compilación para revisar y alojar; su existencia no acredita publicación.
 - `mo-co/dist/assets/mundo-mo.png`: ilustración generada para el proyecto; no es un recurso oficial de la franquicia.
 - `mo-co/docs/decisiones.md`: correspondencia entre presentación y sitio, referencias corporativas y procedencia de la ilustración.
 - `mo-co/docs/design-audit.md`: referencias, trazabilidad de contenido y límites de la versión actual.

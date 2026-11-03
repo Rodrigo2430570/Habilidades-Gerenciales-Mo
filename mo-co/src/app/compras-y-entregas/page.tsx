@@ -1,0 +1,8 @@
+import { Arrow } from '@/components/ui/Arrow';
+import type { Metadata } from 'next';
+import { StoreHeader } from '@/components/shop/StoreHeader';
+import serviceCopy from '@/data/service-copy.json';
+const { policies } = serviceCopy;
+export const metadata: Metadata = { title: 'Compras y entregas | MO Co.' };
+const ids = ['precios-y-pedidos', 'entrega-a-domicilio', 'recoleccion', 'cambios-y-devoluciones', 'garantia-y-servicio-tecnico'];
+export default function PoliciesPage() { return <main id="contenido" className="store-page"><StoreHeader label="Compras y entregas" title="Comprar con claridad también es parte del cuidado."><p>Consulta qué incluye tu pedido, cómo recibirlo y qué hacer si necesitas un cambio, una devolución o apoyo técnico.</p></StoreHeader><div className="shell store-shell policies-layout"><nav className="policies-nav" aria-label="Condiciones de compra">{policies.map((policy, index) => <a key={policy.title} href={`#${ids[index]}`}>{policy.title}</a>)}<a href="/ayuda/#solicitud">Necesito ayuda</a></nav><div className="policies-copy"><p className="local-notice">Puedes preparar y descargar una solicitud de pedido. Aún no se realizan cobros ni se confirman pedidos desde este sitio.</p>{policies.map((policy, index) => <section key={policy.title} id={ids[index]}><h2>{policy.title}</h2>{policy.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}{index === 1 && <p className="muted">Cobertura y fecha por confirmar al revisar el destino y la disponibilidad.</p>}</section>)}<a className="shop-button" href="/ayuda/#solicitud">Preparar una solicitud de atención <Arrow /></a></div></div></main>; }

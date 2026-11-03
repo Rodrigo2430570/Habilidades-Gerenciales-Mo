@@ -3,12 +3,15 @@
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { companyPages } from './site-map';
+import { useShop } from '@/components/shop/ShopProvider';
 
-const navigation = [['/', 'Inicio'], ...companyPages.map(page => [page.href, page.label])];
+const navigation = [['/', 'Inicio'], ['/#explora-title', 'Conoce MO'], ['/productos/', 'Nuestros productos'], ['/paquetes/', 'Más juntos, mejor'], ['/ayuda/', 'Ayuda']];
 
 export function Navigation() {
   const mobileMenu = useRef<HTMLDetailsElement>(null);
   const pathname = usePathname();
+  const { lines } = useShop();
+  const count = lines.reduce((sum, line) => sum + line.quantity, 0);
 
   useEffect(() => {
     const close = (event: PointerEvent) => {
@@ -28,6 +31,6 @@ export function Navigation() {
   return <header className="site-header"><div className="shell site-header__inner">
     <a className="brand" href="/" aria-label="MO Co., ir al inicio"><span className="brand__symbol">MO<span>•</span></span><span className="brand__name">MO Co.<small>CREADOS PARA CONECTAR</small></span></a>
     <nav className="desktop-nav" aria-label="Navegación principal">{navigation.map(([href, label]) => <a key={href} href={href} aria-current={pathname === href || `${pathname}/` === href ? 'page' : undefined}>{label}</a>)}</nav>
-    <details className="mobile-nav" ref={mobileMenu}><summary>Menú <span aria-hidden="true">+</span></summary><nav aria-label="Navegación móvil">{navigation.map(([href, label]) => <a key={href} href={href} aria-current={pathname === href || `${pathname}/` === href ? 'page' : undefined} onClick={() => { if (mobileMenu.current) mobileMenu.current.open = false; }}>{label}</a>)}</nav></details>
+    <div className="header-actions"><a className="bag-link" href="/bolsa/" aria-label={`Bolsa, ${count} artículos`} aria-current={pathname.startsWith('/bolsa') ? 'page' : undefined}><svg aria-hidden="true" width="20" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 7h14l2 14H3L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg><span>Bolsa</span><span className="bag-count">{count}</span></a><details className="mobile-nav" ref={mobileMenu}><summary>Menú <span aria-hidden="true">+</span></summary><nav aria-label="Navegación móvil">{navigation.map(([href, label]) => <a key={href} href={href} aria-current={pathname === href || `${pathname}/` === href ? 'page' : undefined} onClick={() => { if (mobileMenu.current) mobileMenu.current.open = false; }}>{label}</a>)}<div className="mobile-company-links">{companyPages.map(page => <a key={page.href} href={page.href}>{page.label}</a>)}</div></nav></details></div>
   </div></header>;
 }

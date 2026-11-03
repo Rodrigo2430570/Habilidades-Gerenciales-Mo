@@ -13,6 +13,7 @@ const destinations = [
 export default function Home() {
   return <main id="contenido">
     <Hero />
+    <section className="home-shop-entry" aria-labelledby="home-shop-title"><div className="shell store-shell"><div><h2 id="home-shop-title">Un MO para cada día.</h2><p>Compañeros para jugar, aprender, crear y cuidar lo que importa. Encuentra el MO que mejor va contigo.</p></div><div className="store-actions"><a className="shop-button shop-button--primary" href="/productos/">Explorar productos <Arrow /></a><a className="shop-button shop-button--outline" href="/ayuda/">Necesito ayuda</a></div></div></section>
     <section className="home-wayfinding" aria-labelledby="explora-title">
       <div className="shell">
         <div className="home-wayfinding__intro">

@@ -1,0 +1,86 @@
+{
+  "policies": [
+    {
+      "title": "Precios y pedidos",
+      "paragraphs": [
+        "Todos los precios se muestran en pesos mexicanos e incluyen IVA. Antes de confirmar un pedido podrás revisar productos, cantidades y costo de entrega. No añadimos cargos sin mostrarlos en el resumen.",
+        "La preparación inicia cuando se confirma el pedido y su disponibilidad. Si cambia una fecha estimada, te informaremos antes de acordar la entrega."
+      ]
+    },
+    {
+      "title": "Entrega a domicilio",
+      "paragraphs": [
+        "Enviamos dentro de México a zonas con cobertura. La preparación estándar toma de 2 a 4 días hábiles y el traslado estimado es de 3 a 7 días hábiles adicionales. La fecha se confirma al revisar el destino y la disponibilidad.",
+        "El envío estándar cuesta $199 por pedido y es gratuito cuando el subtotal de productos con entrega estándar alcanza $15,000 después de promociones.",
+        "MMO Assist XL requiere manejo especial: preparación de 5 a 7 días hábiles y flete de $499 por unidad. Este cargo se muestra por separado y no participa en la promoción de envío estándar gratuito."
+      ]
+    },
+    {
+      "title": "Recolección",
+      "paragraphs": [
+        "Puedes elegir recolección sin costo en el Centro de Atención MO, con cita y aviso de pedido listo. La preparación toma de 2 a 4 días hábiles; para MMO Assist XL, de 5 a 7. Te compartiremos las indicaciones y el punto de entrega al confirmar la cita.",
+        "Conservamos el pedido durante 5 días hábiles a partir del aviso de disponibilidad. Si necesitas otra fecha, comunícate con atención al cliente."
+      ]
+    },
+    {
+      "title": "Cambios y devoluciones",
+      "paragraphs": [
+        "Aceptamos solicitudes de cambio o devolución dentro de los 30 días naturales posteriores a la entrega. Cuéntanos el motivo y comparte tu número de pedido para que revisemos el caso.",
+        "Para cambios por preferencia, el producto debe conservar sus accesorios y encontrarse sin daños por uso. Te indicaremos cómo empacarlo y realizar la devolución. Los gastos de traslado por cambio de preferencia corresponden al cliente y se informarán antes de aceptar el trámite.",
+        "Si recibiste un producto incorrecto, dañado durante la entrega o con una falla de origen, MO cubre los traslados necesarios para revisar y atender el caso.",
+        "En paquetes, las devoluciones por preferencia se realizan con todos sus integrantes y accesorios. Las fallas de una unidad se atienden de forma individual mediante garantía.",
+        "Cuando corresponda un reembolso, se realizará al mismo medio del pago original, en un plazo estimado de 5 a 10 días hábiles después de autorizar la devolución. Si aún no has realizado ningún pago, la cancelación no genera un reembolso."
+      ]
+    },
+    {
+      "title": "Garantía y servicio técnico",
+      "paragraphs": [
+        "Todos nuestros robots incluyen 12 meses de garantía por defectos de fabricación, contados desde su entrega. Para solicitarla, comparte tu número de pedido y una descripción de la falla desde el formulario de atención.",
+        "La revisión permite distinguir una falla de origen de daños por golpes, líquidos, uso fuera de las condiciones indicadas o modificaciones no autorizadas. Te comunicaremos el diagnóstico y las opciones antes de realizar trabajos con costo.",
+        "Antes de intervenir un MO, solicitamos autorización para el diagnóstico y el respaldo de información. Un reinicio o borrado requiere tu autorización expresa. Si el daño impide recuperar datos, te lo informaremos antes de continuar."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Cómo elijo mi MO?",
+      "answer": "Piensa en lo que necesitas: compañía, aprendizaje, apoyo para tu negocio o una experiencia modular. Compara sus funciones en la ficha y escríbenos si quieres orientación."
+    },
+    {
+      "question": "¿Puedo comprar un solo robot?",
+      "answer": "Sí. Los 15 modelos se ofrecen de forma individual. Los paquetes son opciones adicionales para combinar dos modelos con un precio especial durante la campaña."
+    },
+    {
+      "question": "¿Cuánto tarda en prepararse mi pedido?",
+      "answer": "La preparación estándar toma de 2 a 4 días hábiles. MMO Assist XL requiere de 5 a 7. El tiempo de traslado se suma a la preparación y depende del destino."
+    },
+    {
+      "question": "¿Hay envío gratis?",
+      "answer": "Sí, para artículos con entrega estándar cuando su subtotal final alcanza $15,000. MMO Assist XL tiene un flete especial de $499 por unidad."
+    },
+    {
+      "question": "¿Puedo recoger mi pedido?",
+      "answer": "Sí, sin costo de envío, con cita y aviso de pedido listo. Te compartiremos las indicaciones al confirmar la recolección."
+    },
+    {
+      "question": "¿Los paquetes incluyen los cargadores y accesorios?",
+      "answer": "Incluyen exactamente los accesorios indicados para cada modelo. Revisa la sección “Incluye” de sus fichas para conocer el contenido completo."
+    },
+    {
+      "question": "¿Qué pasa si mi MO presenta una falla?",
+      "answer": "Envíanos una solicitud de garantía con tu pedido y una descripción del problema. Revisaremos el caso y te explicaremos las opciones antes de cualquier intervención."
+    },
+    {
+      "question": "¿Borran los recuerdos durante una reparación?",
+      "answer": "Buscamos conservar la información. Antes de intervenir, acordamos contigo el respaldo y el procedimiento. Un borrado requiere tu autorización expresa."
+    },
+    {
+      "question": "¿Puedo cambiar o devolver mi compra?",
+      "answer": "Puedes solicitar una revisión dentro de los 30 días naturales posteriores a la entrega. Las condiciones dependen del motivo y de si adquiriste un producto individual o un paquete."
+    },
+    {
+      "question": "¿◻MO y ❁MO se venden juntos?",
+      "answer": "Se venden individualmente y también en el Dúo Bloom. Si eliges solo uno, el otro no está incluido."
+    }
+  ]
+}

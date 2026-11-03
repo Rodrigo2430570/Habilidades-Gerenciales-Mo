@@ -1,0 +1,83 @@
+{
+  "tool": "Built-in image_gen imagegen",
+  "reference": "https://adventuretime.fandom.com/wiki/MOs",
+  "visualReference": "https://www.walmart.com/ip/Adventure-Time-BMO-Mens-and-Womens-Short-Sleeve-T-Shirt-Black-S-XXL/2410486770",
+  "note": "Silhouettes from approved descriptions and visual reference. Conceptual renders, not real physical product photography or official commercial capabilities.",
+  "assets": [
+    {
+      "id": "bmo",
+      "name": "BMO Play",
+      "prompt": "Use case: product-mockup. Create one catalog asset for MO Co.: BMO Play from Adventure Time. Full-body frontal three-quarter 3D render, square image, white studio background, subtle grounding shadow, soft diffused studio lighting, matte recycled plastic and metal. Correct BMO silhouette: mint-green rectangular console body with pale-green face screen, simple black dot eyes and friendly smile, yellow directional cross and colorful round buttons below, slender mint arms and short mint legs. Entire robot centered with 10% white margin on all sides; no cropped extremities. No text, prices, frames, logos, watermark, no other objects or robots. This is a conceptual illustration, not a real physical product."
+    },
+    {
+      "id": "cmo",
+      "name": "CMO Assist",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot CMO Assist, retaining the following reference silhouette: small compact beige cuboid body, square pale screen with dot eyes and smile, a blue horizontal rectangular button below, thin beige arms with three-finger hands, thin short beige legs, block feet; no yellow directional cross. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "dmo",
+      "name": "DMO Welcome",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot DMO Welcome, retaining the following reference silhouette: tall narrow khaki receptionist robot, octagonal slightly chamfered box head with light-green rectangular screen and simple dot-eyed smile, slim vertical khaki torso with yellow keypad panel, thin yellow arms and long yellow legs, tiny aerial on head; NOT a large BMO. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "emo",
+      "name": "EMO Restore",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot EMO Restore, retaining the following reference silhouette: gray-olive upright rectangular computer tower body on TWO black rubber caterpillar tracks, small pale rectangular screen with simple friendly face and horizontal vents above; thin blue flexible arms and claw hands. No legs, no weapons. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "smo",
+      "name": "SMO Guard",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot SMO Guard, retaining the following reference silhouette: tall robust computer-tower silhouette, dark graphite cuboid case with khaki front face and sloped top edge, small pale-green face screen low on front, simple friendly dot eyes, thick flexible graphite arms and short graphite legs. No weapons or gun accessories. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "mmo",
+      "name": "MMO Assist XL",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot MMO Assist XL, retaining the following reference silhouette: very broad heavy blue cuboid robot with graphite side panels, wide pale rectangular face screen with simple dot eyes and friendly mouth, very large thick curved blue arms at both sides, short sturdy graphite legs and broad feet, much wider and larger-bodied than BMO, no game controls. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "qmo",
+      "name": "QMO Garden",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot QMO Garden, retaining the following reference silhouette: turquoise slender cylindrical upright torso with a large ROUND bulb-shaped turquoise head and pale oval face, two dot eyes and smile, slim blue legs and thin turquoise arms, one small watering can held alongside. The round head is DISTINCT from the cylindrical torso. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "omo",
+      "name": "OMO Active",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot OMO Active, retaining the following reference silhouette: round spherical turquoise body with pale oval face on its front, dot eyes and small friendly smile, thin turquoise stick-like arms and thin legs, small round side protrusions. Entire body is a sphere, NOT a box or a cylinder. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "pmo",
+      "name": "PMO Learn",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot PMO Learn, retaining the following reference silhouette: compact violet robot with a pointed triangular prism roof above a short rectangular cuboid body, pale face screen dot eyes smiling, thin violet arms and legs, one discreet button. Clearly visible pyramidal/triangular top profile. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "wmo",
+      "name": "WMO Audio",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot WMO Audio, retaining the following reference silhouette: green emerald HORIZONTAL wide rectangular body, pale wide horizontal face screen with dot eyes and smile, two large rotary knobs on the sides, small stereo speaker holes on front lower panel, short legs, slim arms. Width nearly twice height, no vertical BMO shape. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "amo",
+      "name": "AMO Classic",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot AMO Classic, retaining the following reference silhouette: retro olive-gray robot larger than BMO, large cuboid body whose top is a broad characteristic flared horizontal cap with short sideways horn-like projections, wide pale screen with simple eyes and smile, retro keypad below, slim limbs, no BMO color palette. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "heartmo",
+      "name": "Heart MO Host",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot Heart MO Host, retaining the following reference silhouette: pink tall rectangular robot body with pale green face screen, dot eyes and friendly smile, small pink heart button on front, slender arms, VERY LONG slender pink legs ending in bright red HIGH HEEL shoes, entire shoes visible. No heart-shaped head. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "lmo",
+      "name": "LMO Game",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot LMO Game, retaining the following reference silhouette: purple JOYSTICK-shaped robot: broad rounded square game-controller base, central short joystick stalk topped by a rounded face panel with two dot eyes and smile, thin small arms and short legs from base, few round controller buttons on base. Distinct silhouette, not rectangular console. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "squaremo",
+      "name": "Square MO Hub",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot Square MO Hub, retaining the following reference silhouette: light blue cubic robot with prominent EMPTY square docking recess in its upper surface, pale face screen on front dot eyes and friendly smile, small slim arms and short legs. Display this robot ALONE: no flower robot, no flower, the recess is visibly empty. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    },
+    {
+      "id": "flowermo",
+      "name": "Flower MO Bloom",
+      "prompt": "Use case: product-mockup. Asset: one individual product image for MO Co. catalog. Create a conceptual 3D product render of the Adventure Time MO robot Flower MO Bloom, retaining the following reference silhouette: tiny pink SQUARE cuboid robot with pale square face screen dot eyes and friendly smile, small thin pink arms and short pink legs, a yellow daisy flower extended on a short stem emerging from top. Alone, no blue base robot. Consistent catalog visual direction: full body frontal three-quarter angle, matte plastic and metal, soft diffused studio illumination, clean pure white square background, discreet grounding shadow, centered with generous 12 percent margins, all head, arms, feet and bases fully visible. Simple charming proportions from Adventure Time MOs. No text, letters, labels, logo, pricing, frame, watermark, other robots or unrelated accessories. High quality restrained toy-product visualization, not a photograph of a real robot."
+    }
+  ]
+}
