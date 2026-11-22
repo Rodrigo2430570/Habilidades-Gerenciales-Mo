@@ -7,6 +7,7 @@ import './globals.css';
 import './motion.css';
 import './multipage.css';
 import './journey.css';
+import './company-reading.css';
 import './store.css';
 
 export const metadata: Metadata = {

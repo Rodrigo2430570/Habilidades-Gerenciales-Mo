@@ -1,12 +1,13 @@
 import { Hero } from '@/components/sections/Hero';
 import { EditorialGallery } from '@/components/sections/EditorialGallery';
+import { companyScenes } from '@/components/sections/company-scenes';
 import { CompanyGraphic } from '@/components/graphics/CompanyGraphic';
 import { Arrow } from '@/components/ui/Arrow';
 
 const destinations = [
-  { href: '/estrategia/', title: 'Estrategia', description: 'Nuestra filosofía, el panorama y los planes que guían cada decisión.', image: '/assets/mo-fabrica.png', alt: 'Interpretación de la antigua fábrica MO entre las arenas de las Tierras Baldías', className: 'home-destination--wide', graphic: false },
-  { href: '/organizacion/', title: 'Organización', description: 'Conoce a Moe y a las unidades que participan en las iniciativas.', image: '/assets/mo-comunidad.png', alt: 'Comunidad de unidades MO diversas en las galerías de la fábrica subterránea', className: 'home-destination--landscape', graphic: false },
-  { href: '/trabajo/', title: 'Forma de trabajar', description: 'Cuidado, colaboración y conocimiento compartido en la práctica.', image: '/assets/mo-memoria.png', alt: 'Manuales, módulos de memoria y piezas en una mesa de trabajo de la fábrica MO', className: 'home-destination--wide', graphic: false },
+  { href: '/estrategia/', title: 'Estrategia', description: 'Nuestra filosofía, el panorama y los planes que guían cada decisión.', image: companyScenes.factory, alt: 'Interpretación de la antigua fábrica MO entre las arenas de las Tierras Baldías', className: 'home-destination--wide', graphic: false },
+  { href: '/organizacion/', title: 'Organización', description: 'Conoce a Moe y a las unidades que participan en las iniciativas.', image: companyScenes.community, alt: 'Comunidad de unidades MO diversas en las galerías de la fábrica subterránea', className: 'home-destination--landscape', graphic: false },
+  { href: '/trabajo/', title: 'Forma de trabajar', description: 'Cuidado, colaboración y conocimiento compartido en la práctica.', image: companyScenes.archive, alt: 'Manuales, módulos de memoria y piezas en una mesa de trabajo de la fábrica MO', className: 'home-destination--wide', graphic: false },
   { href: '/compromiso/', title: 'Compromiso', description: 'Metas previstas y criterios para comprobar nuestro trabajo.', image: '', alt: '', className: 'home-destination--graphic', graphic: true },
 ];
 

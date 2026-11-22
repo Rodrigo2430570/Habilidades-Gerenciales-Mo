@@ -1,5 +1,5 @@
-export function StoryImage({ src, alt, caption }: { src: string; alt: string; caption: string }) {
-  return <figure className="story-image" data-reveal="image"><img src={src} alt={alt} loading="lazy" width="1536" height="1024" /><figcaption>{caption}</figcaption></figure>;
+export function StoryImage({ src, alt, caption, width = 1536, height = 1024 }: { src: string; alt: string; caption?: string; width?: number; height?: number }) {
+  return <figure className="story-image" data-reveal="image"><img src={src} alt={alt} loading="lazy" width={width} height={height} />{caption && <figcaption>{caption}</figcaption>}</figure>;
 }
 
 const plans = [
@@ -9,8 +9,8 @@ const plans = [
 ];
 
 export function PlanTimeline() {
-  return <div className="plan-timeline" role="img" aria-label="Plazos previstos: mantenimiento tres meses, respaldo y recuperación cuatro meses, transferencia de conocimientos cuatro meses">
-    <div className="plan-timeline__heading"><h3>Horizonte de los planes</h3><p>Duración prevista de cada iniciativa. No indica avance alcanzado.</p></div>
+  return <div className="plan-timeline">
+    <div className="plan-timeline__heading"><h4>Horizonte de los planes</h4><p>Duración prevista de cada iniciativa. No indica avance alcanzado.</p></div>
     <div className="plan-timeline__scale" aria-hidden="true"><span>Inicio</span><span>1 mes</span><span>2 meses</span><span>3 meses</span><span>4 meses</span></div>
     {plans.map(plan => <div className="plan-timeline__row" key={plan.name}><strong>{plan.name}</strong><div className="plan-timeline__track"><span style={{ width: plan.width }} /></div><span>{plan.duration}</span></div>)}
   </div>;
