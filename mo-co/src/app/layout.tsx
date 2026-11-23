@@ -5,6 +5,7 @@ import { ReadingNavigation, PageJourney } from '@/components/sections/PageJourne
 import { ShopProvider } from '@/components/shop/ShopProvider';
 import './globals.css';
 import './motion.css';
+import './hero-experience.css';
 import './multipage.css';
 import './journey.css';
 import './company-reading.css';

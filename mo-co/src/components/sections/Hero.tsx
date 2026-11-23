@@ -1,4 +1,5 @@
 import { Button } from '../ui/Button';
+import { HeroMascot } from './HeroMascot';
 
 export function Hero() {
   return <section id="inicio" className="hero" aria-labelledby="hero-title">
@@ -9,22 +10,7 @@ export function Hero() {
         <p className="hero__lead">Creamos robots MO para ayudar, aprender y conectar. Cuidamos sus capacidades, sus recuerdos y el conocimiento que los hizo posibles.</p>
         <div className="hero__cta"><Button href="/estrategia/">Conoce nuestra estrategia</Button></div>
       </div>
-      <div className="hero__art">
-        <span className="hero__art-word" aria-hidden="true">MO</span>
-        {/* Local project artwork; not presented as official franchise imagery. */}
-        <div className="hero__mascot-entry">
-          <div className="hero__mascot-parallax">
-            <div className="hero__mascot-reactive">
-              <div className="hero__mascot-hover">
-                <div className="hero__mascot-float">
-                  <img src="/assets/bmo-institute.png" width="1122" height="1402" alt="Robot MO verde con controles de colores y expresión curiosa" fetchPriority="high" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p>UN PROPÓSITO EN CADA CIRCUITO</p>
-      </div>
+      <HeroMascot />
     </div>
     <div className="shell hero__foot"><span>FÁBRICA DE ROBOTS DE OOO</span><a href="#explora-title">Explora MO Co.</a></div>
   </section>;

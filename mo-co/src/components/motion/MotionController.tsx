@@ -31,11 +31,19 @@ export function MotionController() {
       mascot?.style.setProperty('--mascot-pointer-x', '0px');
       mascot?.style.setProperty('--mascot-pointer-y', '0px');
       mascot?.style.setProperty('--mascot-pointer-rotate', '0deg');
+      hero?.style.setProperty('--hero-light-x', '0px');
+      hero?.style.setProperty('--hero-light-y', '0px');
+      hero?.style.setProperty('--hero-word-x', '0px');
     }
 
     function onPointerMove(event: PointerEvent) {
       if (!hero || !mascot || reduced.matches || !finePointer.matches || document.hidden || event.pointerType !== 'mouse') return;
-      const box = hero.getBoundingClientRect();
+      const art = hero.querySelector<HTMLElement>('.hero__art');
+      const box = art?.getBoundingClientRect();
+      if (!box || event.clientX < box.left - 70 || event.clientX > box.right + 70 || event.clientY < box.top - 70 || event.clientY > box.bottom + 70) {
+        resetPointer();
+        return;
+      }
       pointerX = Math.max(-1, Math.min(1, ((event.clientX - box.left) / box.width) * 2 - 1));
       pointerY = Math.max(-1, Math.min(1, ((event.clientY - box.top) / box.height) * 2 - 1));
       if (pointerFrame) return;
@@ -44,6 +52,9 @@ export function MotionController() {
         mascot.style.setProperty('--mascot-pointer-x', `${(pointerX * 6).toFixed(2)}px`);
         mascot.style.setProperty('--mascot-pointer-y', `${(pointerY * 4).toFixed(2)}px`);
         mascot.style.setProperty('--mascot-pointer-rotate', `${(pointerX * .8).toFixed(2)}deg`);
+        hero.style.setProperty('--hero-light-x', `${(pointerX * 10).toFixed(2)}px`);
+        hero.style.setProperty('--hero-light-y', `${(pointerY * 7).toFixed(2)}px`);
+        hero.style.setProperty('--hero-word-x', `${(pointerX * -4).toFixed(2)}px`);
       });
     }
 
@@ -81,6 +92,7 @@ export function MotionController() {
       frame = 0;
       const heroBox = hero?.getBoundingClientRect();
       const heroVisible = Boolean(heroBox && heroBox.bottom > 0 && heroBox.top < innerHeight && !document.hidden);
+      root.classList.toggle('hero-present', Boolean(hero));
       root.classList.toggle('hero-visible', heroVisible);
       header?.classList.toggle('is-scrolled', window.scrollY > 20);
 
@@ -88,9 +100,11 @@ export function MotionController() {
         const progress = Math.min(1, Math.max(0, -heroBox.top / Math.max(heroBox.height, 1)));
         root.style.setProperty('--hero-depth', `${Math.round(progress * 24)}px`);
         mascotParallax?.style.setProperty('--mascot-scroll-y', `${Math.round(progress * 24)}px`);
+        hero?.style.setProperty('--hero-scroll-progress', String(progress));
       } else {
         root.style.setProperty('--hero-depth', '0px');
         mascotParallax?.style.setProperty('--mascot-scroll-y', '0px');
+        hero?.style.setProperty('--hero-scroll-progress', '0');
       }
       if (!heroVisible || !finePointer.matches || reduced.matches) resetPointer();
     }
@@ -135,12 +149,16 @@ export function MotionController() {
       reduced.removeEventListener('change', updatePreference);
       desktop.removeEventListener('change', scheduleUpdate);
       finePointer.removeEventListener('change', scheduleUpdate);
-      root.classList.remove('motion-ready', 'hero-visible');
+      root.classList.remove('motion-ready', 'hero-visible', 'hero-present');
       root.style.removeProperty('--hero-depth');
       mascotParallax?.style.removeProperty('--mascot-scroll-y');
       mascot?.style.removeProperty('--mascot-pointer-x');
       mascot?.style.removeProperty('--mascot-pointer-y');
       mascot?.style.removeProperty('--mascot-pointer-rotate');
+      hero?.style.removeProperty('--hero-light-x');
+      hero?.style.removeProperty('--hero-light-y');
+      hero?.style.removeProperty('--hero-word-x');
+      hero?.style.removeProperty('--hero-scroll-progress');
     };
   }, [pathname]);
 
