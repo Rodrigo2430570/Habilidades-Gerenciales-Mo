@@ -25,7 +25,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/bmo-play.png",
+    "image": "/assets/products/bmo-play.webp",
     "alt": "Ilustración de BMO Play, verde menta",
     "aliases": [
       "bmo",
@@ -58,7 +58,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/cmo-assist.png",
+    "image": "/assets/products/cmo-assist.webp",
     "alt": "Ilustración de CMO Assist, beige",
     "aliases": [
       "cmo",
@@ -91,7 +91,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/dmo-welcome.png",
+    "image": "/assets/products/dmo-welcome.webp",
     "alt": "Ilustración de DMO Welcome, caqui con extremidades amarillas",
     "aliases": [
       "dmo",
@@ -124,7 +124,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/emo-restore.png",
+    "image": "/assets/products/emo-restore.webp",
     "alt": "Ilustración de EMO Restore, gris oliva con brazos azules",
     "aliases": [
       "emo",
@@ -157,7 +157,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/smo-guard.png",
+    "image": "/assets/products/smo-guard.webp",
     "alt": "Ilustración de SMO Guard, grafito y caqui",
     "aliases": [
       "smo",
@@ -190,7 +190,7 @@
     "preparation": "5 a 7 días hábiles",
     "specialDelivery": true,
     "care": "",
-    "image": "/assets/products/mmo-assist-xl.png",
+    "image": "/assets/products/mmo-assist-xl.webp",
     "alt": "Ilustración de MMO Assist XL, azul con laterales grafito",
     "aliases": [
       "mmo",
@@ -223,7 +223,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "evitar inmersión y lluvia directa",
-    "image": "/assets/products/qmo-garden.png",
+    "image": "/assets/products/qmo-garden.webp",
     "alt": "Ilustración de QMO Garden, turquesa",
     "aliases": [
       "qmo",
@@ -256,7 +256,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/omo-active.png",
+    "image": "/assets/products/omo-active.webp",
     "alt": "Ilustración de OMO Active, turquesa",
     "aliases": [
       "omo",
@@ -289,7 +289,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/pmo-learn.png",
+    "image": "/assets/products/pmo-learn.webp",
     "alt": "Ilustración de PMO Learn, violeta",
     "aliases": [
       "pmo",
@@ -322,7 +322,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/wmo-audio.png",
+    "image": "/assets/products/wmo-audio.webp",
     "alt": "Ilustración de WMO Audio, verde esmeralda",
     "aliases": [
       "wmo",
@@ -355,7 +355,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/amo-classic.png",
+    "image": "/assets/products/amo-classic.webp",
     "alt": "Ilustración de AMO Classic, gris oliva",
     "aliases": [
       "amo",
@@ -388,7 +388,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/heartmo-host.png",
+    "image": "/assets/products/heartmo-host.webp",
     "alt": "Ilustración de ♥MO Host, rosa con tacones rojos",
     "aliases": [
       "heartmo",
@@ -421,7 +421,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/lmo-game.png",
+    "image": "/assets/products/lmo-game.webp",
     "alt": "Ilustración de LMO Game, morado",
     "aliases": [
       "lmo",
@@ -454,7 +454,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/squaremo-hub.png",
+    "image": "/assets/products/squaremo-hub.webp",
     "alt": "Ilustración de ◻MO Hub, azul claro",
     "aliases": [
       "squaremo",
@@ -487,7 +487,7 @@
     "preparation": "2 a 4 días hábiles",
     "specialDelivery": false,
     "care": "",
-    "image": "/assets/products/flowermo-bloom.png",
+    "image": "/assets/products/flowermo-bloom.webp",
     "alt": "Ilustración de ❁MO Bloom, rosa con flor amarilla",
     "aliases": [
       "flowermo",

@@ -1,5 +1,5 @@
 export function StoryImage({ src, alt, caption, width = 1536, height = 1024 }: { src: string; alt: string; caption?: string; width?: number; height?: number }) {
-  return <figure className="story-image" data-reveal="image"><img src={src} alt={alt} loading="lazy" width={width} height={height} />{caption && <figcaption>{caption}</figcaption>}</figure>;
+  return <figure className="story-image"><img src={src} alt={alt} loading="lazy" width={width} height={height} />{caption && <figcaption>{caption}</figcaption>}</figure>;
 }
 
 const plans = [

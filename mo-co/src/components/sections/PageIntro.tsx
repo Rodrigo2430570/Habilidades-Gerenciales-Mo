@@ -20,7 +20,7 @@ export function PageIntro({ title, description, image, alt, visual, headingId, t
         <h1 id={headingId}>{title}</h1>
         <p>{description}</p>
       </div>
-      <div className={`page-intro__visual${visual ? ' page-intro__visual--graphic' : ''}`}>{visual ?? (image ? <img src={image} alt={alt ?? ''} width="1536" height="1024" /> : null)}</div>
+      <div className={`page-intro__visual${visual ? ' page-intro__visual--graphic' : ''}`}>{visual ?? (image ? <img src={image} alt={alt ?? ''} width="1536" height="1024" fetchPriority="high" /> : null)}</div>
     </div>
   </header>;
 }

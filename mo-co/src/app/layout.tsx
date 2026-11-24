@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Navigation } from '@/components/sections/Navigation';
-import { MotionController } from '@/components/motion/MotionController';
 import { ReadingNavigation, PageJourney } from '@/components/sections/PageJourney';
 import { ShopProvider } from '@/components/shop/ShopProvider';
 import './globals.css';
@@ -19,7 +18,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="es"><body>
     <ShopProvider>
-    <MotionController />
     <a className="skip-link" href="#contenido">Saltar al contenido</a>
     <Navigation />
     <ReadingNavigation />

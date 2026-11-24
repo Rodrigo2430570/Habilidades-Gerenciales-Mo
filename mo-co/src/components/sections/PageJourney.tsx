@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { companyPages, pageIndex } from './site-map';
 import { Arrow } from '../ui/Arrow';
@@ -10,17 +10,18 @@ export function ReadingNavigation() {
   const index = pageIndex(pathname);
   const page = companyPages[index];
   const [active, setActive] = useState('');
+  const sectionsNav = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (!page) return;
     let frame = 0;
+    const sections = page.sections.map(([id]) => document.getElementById(id));
     const update = () => {
       frame = 0;
-      const edge = (document.querySelector('.site-header')?.getBoundingClientRect().height ?? 78) + 90;
-      let current: string = page.sections[0][0];
-      for (const [id] of page.sections) {
-        const element = document.getElementById(id);
-        if (element && element.getBoundingClientRect().top <= edge) current = id;
+      const edge = (sectionsNav.current?.closest('.reading-nav')?.getBoundingClientRect().bottom ?? 128) + 40;
+      let current = '';
+      for (const section of sections) {
+        if (section && section.getBoundingClientRect().top <= edge) current = section.id;
       }
       setActive(current);
     };
@@ -35,11 +36,23 @@ export function ReadingNavigation() {
     };
   }, [page]);
 
+  useEffect(() => {
+    const nav = sectionsNav.current;
+    if (!nav || nav.contains(document.activeElement)) return;
+    const current = nav.querySelector('[aria-current="location"]');
+    if (!current) return;
+    const bounds = nav.getBoundingClientRect();
+    const item = current.getBoundingClientRect();
+    if (item.left < bounds.left || item.right > bounds.right) {
+      nav.scrollBy({ left: item.left - bounds.left - 4, behavior: 'instant' });
+    }
+  }, [active, page]);
+
   if (!page) return null;
   return <div className="reading-nav"><div className="shell reading-nav__inner">
     <a className="reading-nav__home" href="/#explora-title"><Arrow direction="left" /><span>Inicio</span></a>
     <span className="reading-nav__page">{page.label}</span>
-    <nav className="reading-nav__sections" aria-label="En esta página">{page.sections.map(([id, label]) => <a key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined}>{label}</a>)}</nav>
+    <nav ref={sectionsNav} className="reading-nav__sections" aria-label="En esta página">{page.sections.map(([id, label]) => <a key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined}>{label}</a>)}</nav>
   </div></div>;
 }
 

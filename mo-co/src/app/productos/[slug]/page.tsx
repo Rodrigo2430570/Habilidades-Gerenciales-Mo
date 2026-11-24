@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { accessibleProductName, products, money, purchaseSummary, rules } from '@/lib/store';
 import { AddToBag } from '@/components/shop/AddToBag';
+import { ProductViewer } from '@/components/shop/ProductViewer';
 
 export function generateStaticParams() { return products.map(product => ({ slug: product.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const product = products.find(item => item.slug === slug); return { title: `${product?.name ?? 'Producto'} | MO Co.`, description: product?.description }; }
@@ -14,7 +15,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const specs = ['Procesador', 'RAM', 'Almacenamiento', 'Materiales', 'Batería', 'Autonomía', 'Conectividad', 'Medidas', 'Peso', 'Color'] as const;
   return <main id="contenido" className="store-page"><div className="shell store-shell product-detail">
     <nav className="store-breadcrumb" aria-label="Ruta de navegación"><a href="/productos/">Nuestros productos</a><span aria-hidden="true">/</span><span>{product.name}</span></nav>
-    <section className="product-overview" aria-labelledby="product-title"><div className="product-portrait"><img src={product.image} alt={`${product.alt}. ${accessibleProductName(product)}`} width="1024" height="1024" fetchPriority="high"/><span>Ilustración conceptual · MO Co.</span></div>
+    <section className="product-overview" aria-labelledby="product-title"><ProductViewer slug={product.slug} name={accessibleProductName(product)} image={product.image} alt={`${product.alt}. ${accessibleProductName(product)}`} />
       <div className="product-intro"><h1 id="product-title">{product.name}</h1><p className="store-label">{product.category}</p><p className="product-role">{product.role}</p><p className="product-sku">SKU {product.id}</p><p className="product-description">{product.description}</p><p className="detail-price">{money(product.price)} <small>MXN</small></p><p className="price-caption">Precio final · IVA incluido</p>
       {product.specialDelivery && <p className="local-notice">Manejo especial: {money(rules.specialPerUnit)} por unidad a domicilio. Preparación de 5 a 7 días hábiles. No participa en envío estándar gratuito.</p>}
       <AddToBag id={product.id}/><p className="product-reassurance">{purchaseSummary}</p><a href="/compras-y-entregas/">Condiciones de compra y entrega</a>{modular && <div className="modular-note"><p>Se vende por separado. Consulta el paquete compatible.</p><a href="/paquetes/#duo-bloom">Conoce el Dúo Bloom</a></div>}

@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { CompanyIcon } from '@/components/graphics/CompanyGraphic';
 import { FeatureGrid } from '@/components/sections/FeatureGrid';
 import { PlanTimeline, StoryImage } from '@/components/sections/Visuals';
@@ -32,13 +31,11 @@ const actions = [
 ];
 
 function SectionHeading({ number, title, subtitle, id }: { number: string; title: string; subtitle: string; id: string }) {
-  const words = title.split(' ');
-  return <div className="section-heading" data-reveal="heading"><span className="section-number" aria-hidden="true">{number}</span><div><h2 id={id}>{words.map((word, index) => <Fragment key={`${word}-${index}`}><span className="section-heading__word-mask"><span>{word}</span></span>{index < words.length - 1 ? ' ' : null}</Fragment>)}</h2><p>{subtitle}</p></div></div>;
+  return <div className="section-heading"><span className="section-number" aria-hidden="true">{number}</span><div><h2 id={id}>{title}</h2><p>{subtitle}</p></div></div>;
 }
 
 function BlockHeading({ id, title, note }: { id: string; title: string; note?: string }) {
-  const editorialReveal = ['swot-title', 'action-title', 'structure-title', 'results-title'].includes(id);
-  return <div className="block-intro" data-reveal={editorialReveal ? 'rise' : undefined}><h3 id={id}>{title}</h3>{note && <p>{note}</p>}</div>;
+  return <div className="block-intro"><h3 id={id}>{title}</h3>{note && <p>{note}</p>}</div>;
 }
 
 export function StrategySection() {
@@ -50,7 +47,7 @@ export function StrategySection() {
           <BlockHeading id="swot-title" title="Nuestro panorama" note="Conocemos nuestras capacidades y nuestro entorno para tomar mejores decisiones." />
           <div className="illustrated-block panorama-spread">
             <StoryImage src={companyScenes.outlook} alt="Dos unidades MO observan las Tierras Baldías con un mapa desde la fábrica" width={1774} height={887} />
-            <div className="swot-grid" data-stagger>{swot.map(item => <Card tone={item.tone} className="swot-card" key={item.title}>
+            <div className="swot-grid">{swot.map(item => <Card tone={item.tone} className="swot-card" key={item.title}>
               <h4>{item.title}</h4>
               <p className="swot-card__label">{item.label}</p>
               <details className="reading-detail">
@@ -65,13 +62,13 @@ export function StrategySection() {
             <BlockHeading id="goals-title" title="Hacia dónde vamos" note="Tres objetivos con plazos y criterios medibles. Las cifras son metas previstas, no resultados alcanzados." />
             <StoryImage src={companyScenes.goals} alt="Unidades MO revisan piezas, un manual y un dial de diagnóstico" width={1672} height={941} />
           </div>
-          <div className="goals-grid" data-stagger>{goals.map(goal => <Card className="goal-card" key={goal.number}><div className="goal-card__top"><span>{goal.number}</span><span>{goal.deadline}</span></div><h4>{goal.title}</h4><p>{goal.description}</p><div className="goal-card__metrics">{goal.metrics.map(([figure, label]) => <div key={label}><strong>{figure}</strong><span>{label}</span></div>)}</div><details><summary>Cómo lo haremos y mediremos <span aria-hidden="true">+</span></summary><dl>{goal.criteria.map(([term, detail]) => <div key={term}><dt>{term}</dt><dd>{detail}</dd></div>)}</dl></details></Card>)}</div>
+          <div className="goals-grid">{goals.map(goal => <Card className="goal-card" key={goal.number}><div className="goal-card__top"><span>{goal.number}</span><span>{goal.deadline}</span></div><h4>{goal.title}</h4><p>{goal.description}</p><div className="goal-card__metrics">{goal.metrics.map(([figure, label]) => <div key={label}><strong>{figure}</strong><span>{label}</span></div>)}</div><details><summary>Cómo lo haremos y mediremos <span aria-hidden="true">+</span></summary><dl>{goal.criteria.map(([term, detail]) => <div key={term}><dt>{term}</dt><dd>{detail}</dd></div>)}</dl></details></Card>)}</div>
         </div>
         <div id="estrategias" className="content-block">
           <BlockHeading id="strategies-title" title="Nuestras estrategias" note="Convertimos los retos identificados en líneas de trabajo concretas." />
           <div className="illustrated-block">
             <StoryImage src={companyScenes.strategy} alt="Unidades MO trabajan en estaciones de reparación, respaldo y documentación" caption="EL CONOCIMIENTO TAMBIÉN SE CUIDA" width={1752} height={897} />
-            <div className="strategy-list" data-stagger>{strategies.map(item => <article key={item.icon}>
+            <div className="strategy-list">{strategies.map(item => <article key={item.icon}>
               <CompanyIcon kind={item.icon} />
               <div><h4>{item.title}</h4><p>{item.copy}</p></div>
             </article>)}</div>
@@ -80,7 +77,7 @@ export function StrategySection() {
         <div id="accion" className="content-block action-block">
           <BlockHeading id="action-title" title="De la estrategia a la acción" note="Acciones, responsables, presupuesto estimado y plazo de cada iniciativa." />
           <PlanTimeline />
-          <div className="action-grid" data-stagger>{actions.map(item => <Card tone="paper" className="action-card" key={item.number}>
+          <div className="action-grid">{actions.map(item => <Card tone="paper" className="action-card" key={item.number}>
             <span className="action-card__number">{item.time}</span>
             <h4>{item.title}</h4>
             <details className="reading-detail">
@@ -106,7 +103,7 @@ export function OrganizationSection() {
         <SectionHeading number="02" title="Nuestra organización" subtitle="Las iniciativas documentadas reúnen dirección técnica y unidades MO especializadas." id="organization-title" />
         <div className="content-block">
           <BlockHeading id="structure-title" title="Nuestra estructura" note="Estructura de ejecución de los tres planes documentados. El organigrama general de la empresa aún está por definir." />
-          <div className="org-chart" data-reveal="org">
+          <div className="org-chart">
             <div className="org-chart__lead"><span>DIRECCIÓN TÉCNICA E INSTRUCCIÓN</span><strong>Moe</strong><p>Responsable principal de mantenimiento e instructor en la transferencia de conocimiento.</p></div>
             <div className="org-chart__branches">{orgAreas.map(area => <div key={area.branch}>
               <span>{area.branch}</span>
@@ -117,7 +114,7 @@ export function OrganizationSection() {
         </div>
         <div className="content-block">
           <BlockHeading id="areas-title" title="Nuestras áreas" note="Frentes de trabajo presentes en el plan de acción; no equivalen todavía a departamentos formales." />
-          <div className="area-gallery" data-stagger>{orgAreas.map(area => <article key={area.name}>
+          <div className="area-gallery">{orgAreas.map(area => <article key={area.name}>
             <img src={area.image} alt="" width="1536" height="1024" loading="lazy" />
             <div><h4>{area.name}</h4><p>{area.description}</p></div>
           </article>)}</div>
@@ -126,7 +123,7 @@ export function OrganizationSection() {
           <BlockHeading id="team-title" title="Nuestro equipo" note="Puestos, funciones y responsabilidades descritos en los planes disponibles." />
           <div className="illustrated-block">
             <StoryImage src={companyScenes.training} alt="Moe repasa un manual técnico con dos unidades MO" />
-            <div className="team-rows" data-stagger>
+            <div className="team-rows">
               <div><strong>Moe</strong><span>Responsable técnico e instructor</span><p>Coordina el mantenimiento y transmite procedimientos esenciales.</p></div>
               <div><strong>MO de mantenimiento</strong><span>2 unidades asignadas</span><p>Apoyan inspecciones, reparaciones y comprobación de funcionamiento.</p></div>
               <div><strong>MO de sistemas</strong><span>2 unidades asignadas</span><p>Apoyan el almacenamiento y la recuperación de información.</p></div>
@@ -144,13 +141,13 @@ export function WorkSection() {
         <SectionHeading number="03" title="Nuestra forma de trabajar" subtitle="Cuidado, responsabilidad y conocimiento compartido orientan cada iniciativa documentada." id="work-title" />
         <div>
           <BlockHeading id="culture-title" title="Nuestra cultura de trabajo" note="Los cinco valores de MO Co. orientan la forma de cuidar a los robots, preservar recuerdos, responder por la tecnología y mejorar sus capacidades." />
-          <div className="work-details" data-stagger>
+          <div className="work-details">
             <div><CompanyIcon kind="maintenance" /><h3>Cómo lideramos</h3><p>Moe figura como responsable principal del mantenimiento y como instructor de las unidades seleccionadas. El estilo formal de liderazgo aún no está documentado.</p></div>
             <div><CompanyIcon kind="information" /><h3>Cómo nos comunicamos</h3><p>El plan prevé registros, diagnósticos, manuales y evaluación para compartir información técnica. Los canales de comunicación interna están por definir.</p></div>
             <div><CompanyIcon kind="knowledge" /><h3>Cómo impulsamos a nuestro equipo</h3><p>La capacitación de tres unidades MO y su evaluación práctica están previstas. No se han definido otras políticas de motivación o reconocimiento.</p></div>
           </div>
         </div>
-        <figure className="work-learning" data-reveal="image">
+        <figure className="work-learning">
           <figcaption>
             <div className="work-quote">Cuidar lo creado.<br /><em>Compartir lo aprendido.</em></div>
             <p>El trabajo se construye en equipo.</p>
@@ -176,19 +173,19 @@ export function CommitmentSection() {
           <BlockHeading id="standards-title" title="Nuestros estándares" note="Criterios expresados en los objetivos y planes de acción existentes." />
           <div className="illustrated-block">
             <StoryImage src={companyScenes.archive} alt="Manuales y cartuchos de memoria en el archivo técnico de MO Co." />
-            <ul className="standard-list" data-stagger>
+            <ul className="standard-list">
               <li><CompanyIcon kind="maintenance" /><div><h4>Funcionamiento</h4><p>Diagnóstico individual y verificación después de reparar.</p></div></li>
               <li><CompanyIcon kind="information" /><div><h4>Información protegida</h4><p>Respaldo previo a las intervenciones y recuperación comprobada.</p></div></li>
               <li><CompanyIcon kind="knowledge" /><div><h4>Conocimiento conservado</h4><p>Procedimientos documentados, formación y evaluación práctica.</p></div></li>
             </ul>
           </div>
         </div>
-        <div className="content-block"><BlockHeading id="results-title" title="Medimos nuestros resultados" note="Metas previstas: estos números describen lo que buscamos alcanzar, no avances ya obtenidos." /><div className="kpi-grid" data-stagger><div><strong>100 %</strong><span>unidades MO por inspeccionar</span></div><div><strong>≥ 80 %</strong><span>fallas reparables por resolver</span></div><div><strong>100 %</strong><span>unidades intervenidas con respaldo</span></div><div><strong>5</strong><span>procedimientos por documentar</span></div><div><strong>3 MO</strong><span>unidades por capacitar</span></div><div><strong>≥ 90 %</strong><span>meta de evaluación práctica</span></div></div></div>
+        <div className="content-block"><BlockHeading id="results-title" title="Medimos nuestros resultados" note="Metas previstas: estos números describen lo que buscamos alcanzar, no avances ya obtenidos." /><div className="kpi-grid"><div><strong>100 %</strong><span>unidades MO por inspeccionar</span></div><div><strong>≥ 80 %</strong><span>fallas reparables por resolver</span></div><div><strong>100 %</strong><span>unidades intervenidas con respaldo</span></div><div><strong>5</strong><span>procedimientos por documentar</span></div><div><strong>3 MO</strong><span>unidades por capacitar</span></div><div><strong>≥ 90 %</strong><span>meta de evaluación práctica</span></div></div></div>
         <div className="content-block">
           <BlockHeading id="improvement-title" title="Seguimiento y mejora" note="Controles previstos en los planes de acción. Un proceso general de mejora continua está pendiente de definición." />
           <div className="illustrated-block">
             <StoryImage src={companyScenes.maintenance} alt="Inspección de una unidad MO en una mesa de mantenimiento" caption="VERIFICACIÓN EN EL TALLER" />
-            <ol className="review-steps" data-stagger>
+            <ol className="review-steps">
               <li><h4>Inspeccionar</h4><p>Registrar unidades y clasificar fallas.</p></li>
               <li><h4>Verificar</h4><p>Comprobar funcionamiento y recuperación de datos.</p></li>
               <li><h4>Documentar</h4><p>Preparar procedimientos y manuales técnicos.</p></li>
@@ -196,7 +193,7 @@ export function CommitmentSection() {
             </ol>
           </div>
         </div>
-        <div className="closing" data-reveal="fade"><p>El futuro de los MO empieza por cuidar lo que los hace únicos.</p><Button variant="light" href="/">Volver al inicio</Button></div>
+        <div className="closing"><p>El futuro de los MO empieza por cuidar lo que los hace únicos.</p><Button variant="light" href="/">Volver al inicio</Button></div>
       </div></section>
   );
 }

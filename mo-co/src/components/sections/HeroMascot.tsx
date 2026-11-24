@@ -3,6 +3,7 @@
 import { createElement, useEffect, useRef, useState } from 'react';
 
 type Reaction = 'idle' | 'hello' | 'joy' | 'curious';
+type Pose = 'wave' | 'surprise' | 'blink';
 type ModelViewerElement = HTMLElement & {
   availableAnimations?: string[];
   animationName?: string;
@@ -14,11 +15,16 @@ type ModelViewerElement = HTMLElement & {
 // Until then the original, high-quality illustration remains the hero asset.
 const modelSrc = process.env.NEXT_PUBLIC_MO_HERO_MODEL || null;
 const reactions: Reaction[] = ['hello', 'joy', 'curious'];
+const portrait = '/assets/bmo-institute.webp';
+const poses: Record<Pose, string> = {
+  wave: '/assets/bmo-wave-v2.webp',
+  surprise: '/assets/bmo-surprise-v2.webp',
+  blink: '/assets/bmo-blink-v2.webp',
+};
 
-function HeroModel({ src, reaction }: { src: string; reaction: Reaction }) {
+function HeroModel({ src, reaction, animate }: { src: string; reaction: Reaction; animate: boolean }) {
   const viewer = useRef<ModelViewerElement>(null);
   const [loaded, setLoaded] = useState(false);
-  const [motionAllowed, setMotionAllowed] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -30,17 +36,9 @@ function HeroModel({ src, reaction }: { src: string; reaction: Reaction }) {
   }, []);
 
   useEffect(() => {
-    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const update = () => setMotionAllowed(!preference.matches);
-    update();
-    preference.addEventListener('change', update);
-    return () => preference.removeEventListener('change', update);
-  }, []);
-
-  useEffect(() => {
     const node = viewer.current;
     if (!loaded || !node) return;
-    if (!motionAllowed) { node.pause?.(); return; }
+    if (!animate) { node.pause?.(); return; }
     if (!node.availableAnimations?.length) return;
     const wanted = reaction === 'idle' ? 'Idle' : reaction === 'hello' ? 'Wave' : reaction === 'joy' ? 'Happy' : 'Curious';
     const match = node.availableAnimations.find(name => name.toLowerCase() === wanted.toLowerCase());
@@ -49,15 +47,15 @@ function HeroModel({ src, reaction }: { src: string; reaction: Reaction }) {
       node.animationName = match || idle;
       node.play?.();
     }
-  }, [loaded, reaction, motionAllowed]);
+  }, [loaded, reaction, animate]);
 
   return <div className={`hero__model-shell${loaded ? ' is-loaded' : ''}`}>
-    <img className="hero__model-poster" src="/assets/bmo-institute.png" width="1122" height="1402" alt="" aria-hidden="true" />
+    <img className="hero__model-poster" src={portrait} width="1122" height="1402" alt="" aria-hidden="true" />
     {createElement('model-viewer', {
       ref: viewer,
       src,
       alt: 'Robot MO tridimensional con cuerpo verde azulado y rostro luminoso',
-      poster: '/assets/bmo-institute.png',
+      poster: portrait,
       'environment-image': 'neutral',
       'camera-orbit': '0deg 75deg auto',
       'camera-target': 'auto auto auto',
@@ -76,96 +74,76 @@ export function HeroMascot() {
   const art = useRef<HTMLDivElement>(null);
   const [reaction, setReaction] = useState<Reaction>('idle');
   const [blink, setBlink] = useState(false);
-  const [visible, setVisible] = useState(true);
+  const [frames, setFrames] = useState<Partial<Record<Pose, boolean>>>({});
+  const [visible, setVisible] = useState(false);
   const [motionAllowed, setMotionAllowed] = useState(false);
   const reactionIndex = useRef(0);
-  const introPlayed = useRef(false);
-  const userInteracted = useRef(false);
-  const hovering = useRef(false);
+  const blinkPlayed = useRef(false);
   const resetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => () => { if (resetTimer.current) clearTimeout(resetTimer.current); }, []);
 
   useEffect(() => {
+    const loaded = [...(art.current?.querySelectorAll<HTMLImageElement>('img[data-frame]') ?? [])]
+      .filter(image => image.complete && image.naturalWidth > 0);
+    if (loaded.length > 0) {
+      setFrames(current => ({
+        ...current,
+        ...Object.fromEntries(loaded.map(image => [image.dataset.frame, true])),
+      }));
+    }
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
     const updateMotion = () => setMotionAllowed(!preference.matches);
     const updateVisibility = () => {
       const box = art.current?.getBoundingClientRect();
       setVisible(Boolean(box && box.bottom > 0 && box.top < innerHeight && !document.hidden));
     };
-    const observer = new IntersectionObserver(updateVisibility, { threshold: 0 });
-    if (art.current) observer.observe(art.current);
+    const observer = typeof IntersectionObserver === 'undefined' ? null : new IntersectionObserver(updateVisibility);
+    if (art.current) observer?.observe(art.current);
     updateMotion();
     updateVisibility();
     preference.addEventListener('change', updateMotion);
     document.addEventListener('visibilitychange', updateVisibility);
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
       preference.removeEventListener('change', updateMotion);
       document.removeEventListener('visibilitychange', updateVisibility);
     };
   }, []);
 
   useEffect(() => {
-    if (!motionAllowed || !visible || introPlayed.current) return;
-    introPlayed.current = true;
-    const enter = setTimeout(() => {
-      if (!userInteracted.current) setReaction('hello');
-    }, 1450);
-    const settle = setTimeout(() => {
-      if (!userInteracted.current) setReaction(hovering.current ? 'curious' : 'idle');
-    }, 2420);
-    return () => { clearTimeout(enter); clearTimeout(settle); };
-  }, [motionAllowed, visible]);
-
-  useEffect(() => {
-    if (modelSrc || !motionAllowed || !visible || reaction !== 'idle') return;
-    let next: ReturnType<typeof setTimeout>;
-    let close: ReturnType<typeof setTimeout>;
-    const schedule = () => {
-      next = setTimeout(() => {
-        setBlink(true);
-        close = setTimeout(() => { setBlink(false); schedule(); }, 150);
-      }, 3200 + Math.random() * 3600);
+    if (modelSrc || !motionAllowed || !visible || !frames.blink || blinkPlayed.current || reaction !== 'idle') return;
+    let close: ReturnType<typeof setTimeout> | undefined;
+    const start = setTimeout(() => {
+      blinkPlayed.current = true;
+      setBlink(true);
+      close = setTimeout(() => setBlink(false), 145);
+    }, 1800);
+    return () => {
+      clearTimeout(start);
+      clearTimeout(close);
+      setBlink(false);
     };
-    schedule();
-    return () => { clearTimeout(next); clearTimeout(close); setBlink(false); };
-  }, [motionAllowed, visible, reaction]);
+  }, [motionAllowed, visible, reaction, frames.blink]);
 
   function interact() {
-    userInteracted.current = true;
-    const next = reactions[reactionIndex.current % reactions.length];
+    setReaction(reactions[reactionIndex.current % reactions.length]);
     reactionIndex.current += 1;
     if (resetTimer.current) clearTimeout(resetTimer.current);
-    setReaction(next);
-    resetTimer.current = setTimeout(() => setReaction(hovering.current ? 'curious' : 'idle'), 1100);
+    resetTimer.current = setTimeout(() => setReaction('idle'), 760);
   }
 
-  return <div className="hero__art" ref={art} data-reaction={reaction} data-blink={blink ? 'true' : 'false'}>
-    <div className="hero__ambient" aria-hidden="true" />
-    <div className="hero__halo" aria-hidden="true" />
+  const pose = reaction === 'curious' ? 'surprise' : reaction !== 'idle' ? 'wave' : blink ? 'blink' : undefined;
+
+  return <div className="hero__art" ref={art} data-reaction={reaction} data-pose={pose && frames[pose] ? pose : undefined}>
     <span className="hero__art-word" aria-hidden="true">MO</span>
-    <span className="hero__particle hero__particle--one" aria-hidden="true" />
-    <span className="hero__particle hero__particle--two" aria-hidden="true" />
-    <span className="hero__particle hero__particle--three" aria-hidden="true" />
-    <span className="hero__ground-shadow" aria-hidden="true" />
-    <div className="hero__mascot-entry">
-      <div className="hero__mascot-parallax">
-        <div className="hero__mascot-reactive">
-          <div className="hero__mascot-float">
-            <button className="hero__mascot-button" type="button" onClick={interact} onPointerEnter={event => { if (event.pointerType === 'mouse') { hovering.current = true; if (reaction === 'idle') setReaction('curious'); } }} onPointerLeave={() => { hovering.current = false; if (reaction === 'curious') setReaction('idle'); }} aria-label="Interactuar con MO">
-              {modelSrc ? <HeroModel src={modelSrc} reaction={reaction} /> : <span className="hero__mascot-frames">
-                <img className="hero__mascot-frame hero__mascot-frame--base" src="/assets/bmo-institute.png" width="1122" height="1402" alt="Robot MO verde azulado, con rostro sonriente y controles de colores" fetchPriority="high" />
-                <img className="hero__mascot-frame hero__mascot-frame--wave" src="/assets/bmo-wave-v2.png" width="1122" height="1402" alt="" aria-hidden="true" fetchPriority="low" />
-                <img className="hero__mascot-frame hero__mascot-frame--surprise" src="/assets/bmo-surprise-v2.png" width="1122" height="1402" alt="" aria-hidden="true" fetchPriority="low" />
-                <img className="hero__mascot-frame hero__mascot-frame--blink" src="/assets/bmo-blink-v2.png" width="1122" height="1402" alt="" aria-hidden="true" fetchPriority="low" />
-              </span>}
-              <span className="hero__screen-light" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <button className="hero__mascot-button" type="button" onClick={interact} aria-label="Interactuar con MO">
+      {modelSrc ? <HeroModel src={modelSrc} reaction={reaction} animate={motionAllowed && visible} /> : <span className="hero__mascot-frames">
+        <img className="hero__mascot-frame hero__mascot-frame--base" src={portrait} width="1122" height="1402" alt="Robot MO verde azulado, con rostro sonriente y controles de colores" fetchPriority="high" />
+        {(Object.keys(poses) as Pose[]).map(frame => <img key={frame} data-frame={frame} className={`hero__mascot-frame hero__mascot-frame--${frame}`} src={poses[frame]} width="1122" height="1402" alt="" aria-hidden="true" fetchPriority="low" onLoad={() => setFrames(current => current[frame] ? current : { ...current, [frame]: true })} />)}
+      </span>}
+      <span className="hero__screen-light" aria-hidden="true" />
+    </button>
     <p>UN PROPÓSITO EN CADA CIRCUITO</p>
   </div>;
 }

@@ -21,6 +21,6 @@ export function FeatureGrid() {
       </div>
     </div>
     <div className="values-head"><h4>Los valores que nos guían</h4><span>05 PRINCIPIOS</span></div>
-    <div className="values-grid" data-stagger>{values.map(([title, description], index) => <div className="value" key={title}><span>0{index + 1}</span><h5>{title}</h5><p>{description}</p></div>)}</div>
+    <div className="values-grid">{values.map(([title, description], index) => <div className="value" key={title}><span>0{index + 1}</span><h5>{title}</h5><p>{description}</p></div>)}</div>
   </div>;
 }
